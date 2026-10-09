@@ -1,0 +1,105 @@
+{
+  "project": {
+    "name": "manyhouses",
+    "tagline": "Your trusted partner for Egyptian real estate",
+    "description": "Verified listings. Transparent pricing. All of Egypt."
+  },
+  "competition": {
+    "name": "[Afro-Asian Forum for technology and innovation]",
+    "date": "[Oct 2026]",
+    "format": "Live demo + Q&A, Video submission, Booth/expo",
+    "booth_number": "[BOOTH #1]",
+    "submission_deadline": "[20OCt]"
+  },
+  "team": {
+    "founder": {
+      "name": "[Yassin Al Ashry]",
+      "role": "Founder",
+      "bio": "[1-line: real estate / Egypt market / startup experience]",
+      "photo": "images/team/founder.jpg"
+    }
+  },
+  "metrics": {
+    "properties_count": 12,
+    "cities_count": 10,
+    "property_types_count": 12,
+    "demo_users": "[X]",
+    "feedback_score": "[X]/5",
+    "pilot_agents": "[X]",
+    "target_listings_month_3": 500,
+    "target_users_month_6": 1000,
+    "target_gmv_year_1": "EGP 50M"
+  },
+  "market": {
+    "tam": "EGP 3.5T",
+    "sam": "EGP 175B",
+    "som_year_3": "EGP 500M",
+    "housing_gap_2030": "12M+ units",
+    "online_searchers_pct": "65%"
+  },
+  "funding": {
+    "raising": "$[XXX,XXX]",
+    "stage": "Pre-Seed",
+    "allocation": {
+      "agent_acquisition": "40%",
+      "product_dev": "30%",
+      "marketing": "20%",
+      "legal_compliance": "10%"
+    },
+    "milestones": {
+      "listings": "5,000",
+      "users": "25,000",
+      "gmv": "EGP 50M"
+    }
+  },
+  "contact": {
+    "email": "founder@manyhouses.com",
+    "phone": "+20 XXX XXX XXXX",
+    "address": "Cairo, Egypt",
+    "website": "manyhouses.com",
+    "github": "[GITHUB REPO URL]",
+    "linkedin": "[LINKEDIN URL]",
+    "twitter": "[TWITTER URL]",
+    "instagram": "[INSTAGRAM URL]",
+    "facebook": "[FACEBOOK URL]"
+  },
+  "brand": {
+    "colors": {
+      "gold": "#D4AF37",
+      "white": "#FFFFFF",
+      "dark": "#111111",
+      "light_gold": "#FFF8E7"
+    },
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Inter"
+    },
+    "logo_files": {
+      "primary": "images/many_houses_logo.jpeg",
+      "transparent": "images/logo_transparent.png",
+      "white_on_dark": "images/logo_white.png",
+      "gold_on_white": "images/logo_gold.png",
+      "favicon": "images/favicon.ico"
+    }
+  },
+  "cities": [
+    "Cairo",
+    "Giza",
+    "Alexandria",
+    "Hurghada",
+    "Sharm El Sheikh",
+    "Luxor",
+    "Aswan",
+    "Marsa Alam",
+    "Siwa",
+    "New Administrative Capital"
+  ],
+  "features": [
+    "Verified Listings",
+    "National Coverage",
+    "Smart Favorites",
+    "Instant Contracts",
+    "Zero Hidden Fees",
+    "Dedicated Support"
+  ]
+}
