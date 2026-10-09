@@ -30,22 +30,22 @@
 ### [0:10-0:30] SEARCH & DISCOVER
 **Visual:** Home page — type "Cairo" in search → results filter instantly → type "villa" → filter again
 **Audio:**
-> "Start with unified search. Filter by city, property type, price, rooms — instant results across 10 Egyptian cities. No pagination, no loading spinners."
+> "Start with unified search. Search by name, city or type — instant results across 10 Egyptian cities. No pagination, no loading spinners."
 
 ### [0:30-0:55] PROPERTY DETAILS
 **Visual:** Click "Modern Villa" → Details page loads → Scroll: hero image → metrics row → Gallery expander → Details expander → Map expander
 **Audio:**
-> "Every listing is verified — real photos, confirmed ownership, transparent pricing. The details page gives you everything: high-res gallery, full specs, and an interactive map so you can explore the neighborhood before visiting."
+> "Every listing has real photos, a clear price and full specs. The details page gives you the specs and an interactive map so you can explore the neighborhood before visiting."
 
 ### [0:55-1:15] FAVORITES & COMPARISON
-**Visual:** Click heart icon → "Added to Favorites" toast → Click 2 more properties → Navigate to Favorites page (sidebar or direct) → Show 3 properties side-by-side
+**Visual:** Click heart icon → "Added to Favorites" toast → Click 2 more properties → Navigate to Favorites page (sidebar or direct) → Show the saved properties
 **Audio:**
-> "Found something you like? One click saves it to favorites — no account required. Your shortlist persists across sessions. Open the favorites page to compare properties across different cities side by side."
+> "Found something you like? One click saves it to favorites — no account required. Your shortlist lasts for this visit. Open the favorites page to see every property you saved."
 
 ### [1:15-1:35] CONTRACT GENERATION
 **Visual:** From Details page → Click "Generate Contract" (or navigate to Contract page) → Show form filling → Generate → Preview PDF
 **Audio:**
-> "Ready to move forward? Generate a legally-structured contract directly in the app. Fill in buyer/seller details, terms, and payment schedule — download a ready-to-sign PDF in seconds."
+> "Ready to move forward? Generate a contract draft directly in the app. Fill in buyer/seller details, terms, and payment schedule — download it as a text file in seconds, then have a lawyer review it before signing."
 
 ### [1:35-1:50] AUTH & PERSISTENCE
 **Visual:** Click Login → Show login form → Register → Show registration → Mention session state
@@ -81,7 +81,7 @@
 | 0:42 | Favorite heart | Click → show toast | 3s | |
 | 0:45 | Two more favorites | Quick clicks | 6s | |
 | 0:51 | Favorites page | Navigate (sidebar/menu) | 3s | |
-| 0:54 | Favorites compare | Show 3 cards side-by-side | 6s | |
+| 0:54 | Favorites page | Show the saved cards | 6s | |
 | 1:00 | Contract page | Navigate → fill form | 8s | Speed up typing |
 | 1:08 | Generate contract | Click → show PDF preview | 5s | |
 | 1:13 | Login/Register | Quick demo | 5s | |

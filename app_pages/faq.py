@@ -6,7 +6,6 @@ st.set_page_config(
     page_icon=":material/help:",
 )
 
-st.logo("images/many_houses_logo.jpeg")
 st.title(":material/help: Frequently Asked Questions")
 st.caption("Everything you need to know about manyhouses.")
 
@@ -56,4 +55,5 @@ st.space("small")
 
 st.subheader(":material/support_agent: Still have questions?")
 st.caption("Reach out to us at support@manyhouses.com or call +20 100 000 0000.")
-st.button("Contact Us", use_container_width=True, on_click=lambda: st.switch_page("pages/contact_us.py"))
+if st.button("Contact Us", type="primary", width="stretch"):
+    st.switch_page("app_pages/contact_us.py")

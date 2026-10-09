@@ -1,5 +1,5 @@
 import streamlit as st
-from data import properties
+from data import PROPERTIES, find_property
 
 st.set_page_config(
     layout="wide",
@@ -7,16 +7,21 @@ st.set_page_config(
     page_icon=":material/description:",
 )
 
-st.logo("images/many_houses_logo.jpeg")
 st.title(":material/description: Create a Property Contract")
 st.caption("Complete the details below to prepare a contract draft.")
 
-property_names = [item["name"] for item in properties]
+# Build the list of names for the dropdown, and find where the picked property sits in it.
+property_names = []
+for item in PROPERTIES:
+    property_names.append(item["name"])
+
 selected_name = st.session_state.get("selected_property")
-selected_index = property_names.index(selected_name) if selected_name in property_names else 0
+selected_index = 0
+if selected_name in property_names:
+    selected_index = property_names.index(selected_name)
 
 selected_property_name = st.selectbox("Select Property", property_names, index=selected_index)
-property_data = next(item for item in properties if item["name"] == selected_property_name)
+property_data = find_property(selected_property_name)
 
 sidebar_col, main_col = st.columns([1, 4], gap="medium")
 
@@ -68,7 +73,7 @@ with main_col:
         st.subheader(":material/rule: Terms")
         extra_terms = st.text_area("Additional terms")
         accepted = st.checkbox("I confirm that the information entered is correct.")
-        create_button = st.form_submit_button("Create contract draft", use_container_width=True)
+        create_button = st.form_submit_button("Create contract draft", type="primary", width="stretch")
 
 if create_button:
     if not customer_name.strip() or not national_id.strip() or not phone.strip():
@@ -106,5 +111,5 @@ This is a draft and should be reviewed by a legal professional before signing.
             contract_text,
             file_name="property_contract.txt",
             mime="text/plain",
-            use_container_width=True,
+            width="stretch",
         )

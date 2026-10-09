@@ -1,5 +1,5 @@
 import streamlit as st
-from data import properties
+from data import find_property
 
 st.set_page_config(
     layout="wide",
@@ -7,11 +7,10 @@ st.set_page_config(
     page_icon=":material/favorite:",
 )
 
-st.logo("images/many_houses_logo.jpeg")
 st.title(":material/favorite: Your Favorites")
 st.caption("Properties you've saved for later.")
 
-favorites = st.session_state.get("favorites", [])
+favorites = st.session_state.favorites
 
 if not favorites:
     st.info("You haven't saved any properties yet.")
@@ -21,7 +20,7 @@ else:
     st.divider()
 
     for name in favorites:
-        item = next((p for p in properties if p["name"] == name), None)
+        item = find_property(name)
         if item:
             with st.container(border=True):
                 col1, col2 = st.columns([1, 3], gap="medium")
@@ -34,7 +33,7 @@ else:
                     st.write(f":material/bed: {item['rooms']} rooms • :material/bathtub: {item['bathrooms']} • :material/expand: {item['area']} sq ft")
                     if st.button("View Details", key=f"fav_detail_{item['name']}"):
                         st.session_state.selected_property = item["name"]
-                        st.switch_page("pages/details.py")
-                if st.button(":material/favorite:", key=f"remove_fav_{item['name']}", use_container_width=False):
+                        st.switch_page("app_pages/details.py")
+                if st.button(":material/favorite:", key=f"remove_fav_{item['name']}"):
                     st.session_state.favorites.remove(item["name"])
                     st.rerun()

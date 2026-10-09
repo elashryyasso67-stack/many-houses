@@ -1,6 +1,5 @@
-import streamlit as st
-
-properties = [
+# The demo properties. A property's name is its ID, so every name must be different.
+PROPERTIES = [
     {
         "name": "Luxury Apartment",
         "image": "https://picsum.photos/seed/luxury_apartment/800/600",
@@ -148,3 +147,11 @@ properties = [
         "longitude": 31.4580
     },
 ]
+
+
+def find_property(name):
+    # Go through the list until the name matches. Return None if nothing matches.
+    for item in PROPERTIES:
+        if item["name"] == name:
+            return item
+    return None

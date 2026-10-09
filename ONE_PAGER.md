@@ -25,8 +25,8 @@ Egypt's real estate market is **fragmented, opaque, and untrustworthy**.
 |---------|--------------|
 | 🛡️ **Verified Listings** | Every property photographed, ownership confirmed, pricing transparent |
 | 🗺️ **National Coverage** | 10+ cities: Cairo, Giza, Alexandria, Hurghada, Sharm El Sheikh, Luxor, Aswan, Marsa Alam, Siwa, New Administrative Capital |
-| ❤️ **Smart Favorites** | Save & compare properties across cities — no login required |
-| 📄 **Instant Contracts** | Generate ready-to-sign agreements in-app |
+| ❤️ **Smart Favorites** | Save properties you like with one click — no login required |
+| 📄 **Instant Contracts** | Generate a contract draft in-app, downloaded as a text file |
 | 🔍 **Unified Search** | Filter by city, type, price, rooms, area — instant results |
 | 📍 **Map Integration** | See every property on map with neighborhood context |
 
@@ -45,7 +45,7 @@ Egypt's real estate market is **fragmented, opaque, and untrustworthy**.
 - ✅ **Fully functional web app** — built in Streamlit, deploys anywhere
 - ✅ **12 properties × 10 cities** — demo data covering full geographic range
 - ✅ **5 core modules** — Search, Details, Favorites, Contracts, Auth
-- ✅ **Zero dependencies** — runs offline, no external APIs
+- ✅ **One library** — Streamlit only; property photos load from picsum.photos
 - ⏳ **Pilot program** — Onboarding first 20 verified agents in Cairo (Q1 2025)
 
 ---

@@ -6,7 +6,6 @@ st.set_page_config(
     page_icon=":material/info:",
 )
 
-st.logo("images/many_houses_logo.jpeg")
 st.title(":material/home: About manyhouses")
 st.caption("Your trusted partner for Egyptian real estate")
 
@@ -35,6 +34,7 @@ cities = [
     ("New Administrative Capital", ":material/construction:"),
 ]
 
+# Show the cities five to a row.
 cols = st.columns(5, gap="medium")
 for idx, (city, icon) in enumerate(cities):
     with cols[idx % 5]:
@@ -60,7 +60,8 @@ with cols[2]:
 
 st.space("small")
 
-st.subheader(":material/star: What Our Clients Say")
+# These quotes are sample placeholders, not real client reviews. Replace them before launch.
+st.subheader(":material/star: Sample Client Feedback")
 testimonials = [
     ("Amina K.", "Cairo", "Found our dream villa in 3 days. The team was incredibly professional."),
     ("Omar S.", "Hurghada", "Best real estate platform I've used. Highly recommend it."),
@@ -69,7 +70,7 @@ testimonials = [
 for name, city, text in testimonials:
     with st.container(border=True):
         st.write(f"**{name}** — {city}")
-        st.caption(f"\u201C{text}\u201D")
+        st.caption(f"“{text}”")
         st.divider()
 
 st.space("small")

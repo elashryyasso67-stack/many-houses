@@ -82,9 +82,9 @@
 ```
 ┌─────────────────────────────────────┐
 │        10+ Cities Covered           │
-│        12 Property Types            │
+│        4 Property Types             │
 │        0 Hidden Fees                │
-│        100% Verified                │
+│        12 Sample Listings           │
 │                                     │
 │        [App Screenshot]             │
 │                                     │
@@ -126,7 +126,7 @@
 ### App Screenshots Needed
 1. **Home page** — Full grid with 3 properties visible (desktop)
 2. **Details page** — Gallery open + map visible
-3. **Favorites page** — 3+ saved properties comparing
+3. **Favorites page** — 3+ saved properties
 4. **Contract page** — Generated agreement preview
 5. **Mobile view** — Same pages on phone (Chrome DevTools device toolbar)
 

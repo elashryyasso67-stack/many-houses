@@ -40,8 +40,8 @@
 **Script:**
 1. Search "Cairo villa" → instant filter
 2. Click "Modern Villa" → details, gallery, map
-3. Add to favorites → persists across sessions
-4. View favorites page → compare saved properties
+3. Add to favorites → kept for this visit
+4. View favorites page → see every saved property
 5. Contract page → generate agreement
 **Visual:** Live demo (have app running locally)
 
@@ -73,7 +73,7 @@
 **Metrics (fill in your actuals):**
 - ✅ **12 properties** across 10 cities (demo data)
 - ✅ **5 core features:** Search, Details, Favorites, Contracts, Auth
-- ✅ **Zero external dependencies** — runs offline, deploys anywhere
+- ✅ **One library** — Streamlit only; photos load from picsum.photos, deploys to any Python host
 - ⏳ **Pilot users:** [X] | **Feedback score:** [X]/5
 **Visual:** Screenshot montage (home, details, favorites, contract)
 
@@ -87,7 +87,7 @@
 |---------|--------------|-----------------|----------------|
 | Verified listings | ❌ | ✅ | ✅ |
 | National coverage | ✅ | Cairo only | ✅ |
-| Favorites/compare | ❌ | ✅ | ✅ |
+| Favorites | ❌ | ✅ | ✅ |
 | Contract generation | ❌ | ❌ | ✅ |
 | No hidden fees | ❌ | ❌ | ✅ |
 | Arabic + English | ❌ | ✅ | 🔜 |
@@ -146,13 +146,13 @@
 
 ### Slide 4 - Demo
 > [Keep it tight. 90 seconds max. Narrate what you're clicking.]
-> "Search works across name, city, type. Details show gallery, map, specs. Favorites persist without login. Contract page generates a ready-to-sign agreement. All in a lightweight Streamlit app that deploys anywhere."
+> "Search works across name, city, type. Details show gallery, map, specs. Favorites last for the visit, no login needed. Contract page generates a contract draft as a text file. All in a lightweight Streamlit app that deploys anywhere."
 
 ### Slide 5 - Market
 > "Egypt's building 12 million homes by 2030. That's not a typo. The New Capital alone is 700 sq km. But digital infrastructure hasn't caught up. We're building the layer that makes this market transparent."
 
 ### Slide 7 - Traction
-> "We built this in [X] weeks as a team of [X]. No external APIs, no vendor lock-in. The demo data shows 12 properties across 10 cities — but the architecture scales to thousands. We're ready for real inventory."
+> "We built this in [X] weeks as a team of [X]. No paid APIs, no vendor lock-in. The demo data shows 12 properties across 10 cities — but the architecture scales to thousands. We're ready for real inventory."
 
 ### Slide 10 - Ask
 > "We're not asking for money to build the product — it's done. We're asking for capital to verify the first 500 listings, onboard the first 50 agents, and prove the model in Cairo before expanding. This is execution risk, not product risk."
@@ -185,9 +185,9 @@
 ## Appendix Slides (optional, for Q&A)
 
 ### A1: Technical Architecture
-- Streamlit multipage app
+- Streamlit app with one menu, defined in app.py
 - Session state for favorites/auth
-- No database — JSON/CSV ready for migration
+- No database — property data is a Python list in data.py, ready to move to one
 - Deployable to Streamlit Cloud, Railway, Docker, any Python host
 
 ### A2: Data Pipeline (Future)
