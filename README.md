@@ -23,6 +23,8 @@ The app is one Python program that uses [Streamlit](https://streamlit.io) to dra
 - `app_pages/` has one file for each screen. Each file draws its own screen and nothing else.
 - `.streamlit/config.toml` holds the colours and fonts (gold, white and black).
 - `images/` holds the logo and the banner. Property photos come from picsum.photos.
+- `marketing/` holds four short marketing documents: a one-pager, a pitch deck, social posts and a demo video script.
+- `docs/` holds the project documentation.
 
 When you press **View Details**, the app remembers which property you picked. The Property details screen then appears in the menu and opens on that property.
 
@@ -38,8 +40,6 @@ streamlit run app.py
 ```
 
 Then open the address Streamlit prints, usually http://localhost:8501.
-
-`apply_marketing_config.py` is a separate helper. It fills in the placeholders in the marketing documents from `marketing_config.json`. Run it from the project folder with `python3 apply_marketing_config.py`.
 
 ## Deploy it
 

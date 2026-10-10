@@ -54,7 +54,8 @@ streamlit run app.py
 - **Data**: `data.py` — `PROPERTIES` (12 dictionaries across 10 Egyptian cities, 4 property types) and `find_property(name)`.
 - **Screens** (`app_pages/`): `login.py`, `register.py`, `landing.py`, `home.py`, `details.py`, `favorites.py`, `contract.py`, `faq.py`, `about.py`, `contact_us.py`.
 - **Navigation**: `st.switch_page("app_pages/xxx.py")`. When a property is picked, the "View Details" button sets `st.session_state.selected_property` in an `on_click` callback first. The callback runs before the page redraws, so the menu already includes Details when the switch happens.
-- **Marketing**: `apply_marketing_config.py` fills placeholders in the marketing documents and `app_pages/landing.py` from `marketing_config.json`. Plain text replacement, no regex.
+- **Marketing**: the four documents in `marketing/` are plain text. Edit them by hand. There is no script.
+- **Folders**: `marketing/` holds the marketing documents and their script. `docs/` holds the project documentation. The root holds only app code and the instruction and README files.
 
 ## Theming
 

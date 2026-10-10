@@ -11,12 +11,7 @@ Only the first property has an `image2` key, and it is an empty string. The Gall
 
 ### 2. [docs] Copy says the app verifies listings
 The app checks nothing. Still open in:
-- `PITCH_DECK.md`: "Verified Listings", "verified & photographed", "Verified listings" in the comparison table.
-- `ONE_PAGER.md`: "Verified Listings" row, "Zero verification" problem line, "One verified marketplace".
-- `SOCIAL_ASSETS.md`: taglines such as "Verified listings. Zero hidden fees."
-- `VIDEO_DEMO_SCRIPT.md`: "Every listing is verified", "one verified marketplace".
 - `app_pages/about.py`: "Verified Listings" card ("Every property is verified and photographed").
-- `app_pages/landing.py`: the "100% Verified" stat was replaced; the phrase "Verified" is gone from the feature cards.
 
 Decision needed: keep "verified" as the company promise (and make it true with real process), or change the wording.
 
@@ -36,15 +31,10 @@ The form shows a thank-you but nothing is delivered. Decide how messages should 
 
 ### 7. [docs] Placeholder values still in use
 - Phone `+20 100 000 0000` and email `support@manyhouses.com` appear in FAQ, About, Contact us, Landing and README.
-- `marketing_config.json`: `"property_types_count": 12` is wrong. The app has 4 property types.
-- `marketing_config.json` still has `[X]` values and `[GITHUB REPO URL]`-style placeholders.
 - Testimonials on About and Landing are sample quotes. Replace them with real client feedback before launch.
 
 ### 8. [docs] Footer social links are plain text
-The Landing footer lists LinkedIn, Facebook, Instagram and Twitter as text with no links. Add the real URLs from `marketing_config.json` once they exist.
-
-### 9. [docs] Marketing docs describe the old structure
-`PITCH_DECK.md` still refers to a "Streamlit multipage app" and "JSON/CSV ready for migration". The app now uses one menu in `app.py` and property data in `data.py`.
+The Landing footer lists LinkedIn, Facebook, Instagram and Twitter as text with no links. Add the real URLs once they exist.
 
 ## Done in the kid-simple rebuild (2026-10-09)
 
@@ -52,5 +42,5 @@ The Landing footer lists LinkedIn, Facebook, Instagram and Twitter as text with 
 - Removed the pandas dependency. The map takes a plain dictionary.
 - Removed `use_container_width` everywhere. Buttons use `width="stretch"`.
 - Moved the screens from `pages/` to `app_pages/`, so Streamlit does not add its own automatic sidebar.
-- Rewrote `apply_marketing_config.py`. It crashed on the missing `team.cto` key. It now uses plain text replacement and skips missing keys.
+- Deleted the marketing script and its JSON settings. The four marketing documents are now short and plain, with blanks only the team can fill in.
 - Trimmed the landing page: CSS now only for layout, colours and fonts come from `config.toml`, and copy that promised missing features was cut.
