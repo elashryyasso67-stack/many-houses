@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Social Kit</title>
+<!-- Social kit. Every .post becomes social/<id>.png with: python docs/build.py social -->
+<!-- Sizes: Instagram feed 1080x1350 · Stories and Reels cover 1080x1920 · Facebook link 1200x630. -->
+<!-- The words on the images are facts about the app. Captions to post with them are in manyhouses-marketing-plan.md, section 6. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #777; padding: 40px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; font-family: var(--sans); }
+  .post { position: relative; overflow: hidden; background: var(--ink); color: #fff; }
+  .ig { width: 1080px; height: 1350px; padding: 80px 80px; }
+  .story { width: 1080px; height: 1920px; padding: 140px 90px; }
+  .fb { width: 1200px; height: 630px; padding: 60px 64px; }
+  .light { background: #FDFBF6; color: var(--ink); }
+  .gold { background: linear-gradient(140deg, var(--warm-2), var(--accent) 55%, var(--warm)); color: var(--ink); }
+
+  .glow { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(242,204,91,0.34) 0%, rgba(201,155,56,0.10) 52%, rgba(201,155,56,0) 72%); }
+  .brand { display: flex; align-items: center; gap: 22px; }
+  .brand img { width: 64px; height: 96px; }
+  .brand span { font: 500 40px var(--display); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { color: var(--accent); }
+  .gold .brand .dot, .light .brand .dot { color: var(--accent-dark); }
+  .kicker { font: 700 26px var(--mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+  .light .kicker { color: var(--accent-dark); }
+  .gold .kicker { color: var(--ink); }
+  h1 { font: 600 104px/1.0 var(--display); letter-spacing: -0.01em; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .light h1 em { color: var(--accent-dark); }
+  .ar { font-family: var(--arabic); font-weight: 700; }
+  .arline { font: 700 50px/1.4 var(--arabic); direction: rtl; color: rgba(255,255,255,0.75); }
+  .light .arline, .gold .arline { color: rgba(17,17,17,0.7); }
+  .phone { border-radius: 26px; overflow: hidden; border: 4px solid rgba(255,255,255,0.18); background: #fff; box-shadow: 0 30px 60px rgba(0,0,0,0.35); }
+  .light .phone { border-color: rgba(17,17,17,0.15); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+  .phone img { display: block; width: 100%; object-fit: cover; object-position: 0 top; }
+  .url { font: 600 32px var(--mono); }
+  .url b { color: var(--accent); }
+  .gold .url b, .light .url b { color: var(--ink); }
+  .pill { display: inline-block; font: 700 26px var(--mono); letter-spacing: 0.12em; padding: 14px 26px; border-radius: 999px; background: var(--accent); color: var(--ink); }
+  .gold .pill { background: var(--ink); color: var(--accent); }
+  ul.ticks { list-style: none; display: grid; gap: 26px; }
+  ul.ticks li { font: 500 40px/1.3 var(--sans); padding-left: 60px; position: relative; }
+  ul.ticks li::before { content: ""; position: absolute; left: 6px; top: 16px; width: 22px; height: 22px; background: var(--ink); transform: rotate(45deg); }
+  .qr { background: #fff; padding: 22px; border-radius: 18px; display: inline-block; }
+  .qr img { display: block; width: 330px; height: 330px; image-rendering: pixelated; }
+  .note { font: 500 22px var(--mono); opacity: 0.6; }
+</style>
+</head>
+<body>
+
+<!-- Instagram 1: launch -->
+<div class="post ig" id="ig-launch">
+  <div class="glow" style="width: 900px; height: 900px; right: -300px; top: 300px;"></div>
+  <div class="brand"><img src="../assets/mark.svg" alt=""><span>many<span class="dot">·</span>houses</span></div>
+  <h1 style="margin-top: 70px;">10 cities.<br><em>One search.</em></h1>
+  <div class="arline" style="margin-top: 18px;">١٠ مدن. بحث واحد.</div>
+  <div class="phone" style="position: absolute; left: 80px; right: 80px; top: 700px; height: 560px;"><img src="../screenshots/home-cards.jpg" alt="" style="height: 100%;"></div>
+</div>
+
+<!-- Instagram 2: feature -->
+<div class="post ig light" id="ig-feature">
+  <div class="kicker">Every number up front</div>
+  <h1 style="margin-top: 26px; font-size: 92px;">Price, rooms, area.<br><em>Before you visit.</em></h1>
+  <div class="arline" style="margin-top: 18px;">السعر والغرف والمساحة قبل الزيارة</div>
+  <div class="phone" style="position: absolute; left: 80px; right: 80px; top: 640px; height: 560px;"><img src="../screenshots/details-main.jpg" alt="" style="height: 100%; object-position: 0 6%;"></div>
+  <div class="brand" style="position: absolute; left: 80px; bottom: 50px;"><img src="../assets/mark.svg" alt="" style="width: 44px; height: 66px;"><span style="font-size: 30px;">many<span class="dot">·</span>houses</span></div>
+</div>
+
+<!-- Instagram 3: founding partners -->
+<div class="post ig gold" id="ig-partners">
+  <div class="kicker">Brokers · owners</div>
+  <h1 style="margin-top: 26px;">Your city deserves a place next to Cairo.</h1>
+  <div class="arline" style="margin-top: 22px;">مدينتك تستحق مكانًا بجانب القاهرة</div>
+  <ul class="ticks" style="margin-top: 60px;">
+    <li>List your first homes with us</li>
+    <li>Be one of our founding partners</li>
+    <li>10 cities, from Alexandria to Aswan</li>
+  </ul>
+  <div style="position: absolute; left: 80px; bottom: 80px;" class="pill">MANY-HOUSES.STREAMLIT.APP</div>
+  <img src="../assets/mark.svg" alt="" style="position: absolute; right: 70px; bottom: 60px; width: 150px; height: 225px;">
+</div>
+
+<!-- Story 1: try it -->
+<div class="post story" id="story-try">
+  <div class="glow" style="width: 1100px; height: 1100px; left: -50px; top: 260px;"></div>
+  <div class="brand"><img src="../assets/mark.svg" alt=""><span>many<span class="dot">·</span>houses</span></div>
+  <h1 style="margin-top: 110px; font-size: 120px;">Search<br>your city.</h1>
+  <div class="arline" style="margin-top: 22px;">ابحث في مدينتك</div>
+  <div class="phone" style="margin-top: 70px; height: 620px;"><img src="../screenshots/search-cards.jpg" alt="" style="height: 100%;"></div>
+  <div style="position: absolute; left: 90px; right: 90px; bottom: 120px; display: flex; gap: 40px; align-items: center;">
+    <div class="qr"><img src="../assets/qr-app.svg" alt="" style="width: 230px; height: 230px;"></div>
+    <div class="url">Scan or visit<br><b>many-houses<br>.streamlit.app</b></div>
+  </div>
+</div>
+
+<!-- Story 2: partners -->
+<div class="post story gold" id="story-partners">
+  <div class="brand"><img src="../assets/mark.svg" alt=""><span>many<span class="dot">·</span>houses</span></div>
+  <div class="kicker" style="margin-top: 140px;">Calling brokers and owners</div>
+  <h1 style="margin-top: 30px; font-size: 118px;">List your first homes with us.</h1>
+  <div class="arline" style="margin-top: 26px;">اعرض أول عقاراتك معنا</div>
+  <ul class="ticks" style="margin-top: 90px; gap: 40px;">
+    <li>Your listings in your own city</li>
+    <li>Price, rooms and area on every card</li>
+    <li>A map pin for every home</li>
+  </ul>
+  <div style="position: absolute; left: 90px; right: 90px; bottom: 140px; display: flex; gap: 40px; align-items: center;">
+    <div class="qr"><img src="../assets/qr-app.svg" alt="" style="width: 230px; height: 230px;"></div>
+    <div class="url">See it live<br><b>many-houses<br>.streamlit.app</b></div>
+  </div>
+</div>
+
+<!-- Facebook link share -->
+<div class="post fb" id="fb-link">
+  <div class="glow" style="width: 700px; height: 700px; right: -100px; top: -60px;"></div>
+  <div style="position: absolute; left: 64px; top: 60px; width: 560px;">
+    <div class="brand"><img src="../assets/mark.svg" alt="" style="width: 48px; height: 72px;"><span style="font-size: 32px;">many<span class="dot">·</span>houses</span></div>
+    <h1 style="margin-top: 44px; font-size: 64px;">Homes in 10 Egyptian cities. <em>One search.</em></h1>
+    <div class="arline" style="font-size: 32px; margin-top: 14px;">عقارات في ١٠ مدن مصرية</div>
+    <div class="url" style="font-size: 24px; margin-top: 30px;"><b>many-houses.streamlit.app</b></div>
+  </div>
+  <div class="phone" style="position: absolute; left: 660px; right: -40px; top: 70px; bottom: 70px;"><img src="../screenshots/home-cards.jpg" alt="" style="height: 100%;"></div>
+</div>
+
+</body>
+</html>

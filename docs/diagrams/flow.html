@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Flow</title>
+<!-- The visitor's path through the app, and the two things the session remembers. The .canvas size is the PNG size. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<style>
+  html, body { margin: 0; background: var(--white); }
+  .canvas { width: 1600px; height: 900px; }
+  svg { display: block; }
+  .chip { font: 700 13px var(--mono); letter-spacing: 0.12em; }
+  .title { font: 600 25px var(--sans); fill: var(--ink); }
+  .sub { font: 400 16px var(--mono); fill: var(--ink-soft); }
+  .lane { font: 700 14px var(--mono); letter-spacing: 0.16em; fill: var(--ink-soft); }
+  .small { font: 500 15px var(--mono); fill: var(--ink-soft); }
+  .row { font: 500 18px var(--sans); fill: var(--ink); }
+  .row-code { font: 500 16px var(--mono); fill: #8C6A16; }
+  .state { font: 700 21px var(--mono); }
+</style>
+</head>
+<body>
+<div class="canvas">
+<svg width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111111"/>
+    </marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C6A16"/>
+    </marker>
+  </defs>
+
+  <!-- lane 1: the visitor's screens -->
+  <rect x="20" y="20" width="1560" height="470" rx="18" fill="#FBFAF6" stroke="rgba(17,17,17,0.10)" stroke-width="2"/>
+  <text x="48" y="58" class="lane">VISITOR · FROM SEARCH TO CONTRACT DRAFT</text>
+
+  <g>
+    <rect x="50" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#111111" stroke-width="2.5"/>
+    <rect x="70" y="106" width="86" height="24" rx="5" fill="none" stroke="#4A4538" stroke-width="1.5"/>
+    <text x="113" y="123" class="chip" fill="#4A4538" text-anchor="middle">SCREEN</text>
+    <text x="180" y="165" class="title" text-anchor="middle">Sign in</text>
+    <text x="180" y="192" class="sub" text-anchor="middle">boxes not empty</text>
+  </g>
+  <g>
+    <rect x="360" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#111111" stroke-width="2.5"/>
+    <rect x="380" y="106" width="86" height="24" rx="5" fill="none" stroke="#4A4538" stroke-width="1.5"/>
+    <text x="423" y="123" class="chip" fill="#4A4538" text-anchor="middle">SCREEN</text>
+    <text x="490" y="165" class="title" text-anchor="middle">Properties</text>
+    <text x="490" y="192" class="sub" text-anchor="middle">search · 12 cards</text>
+  </g>
+  <g>
+    <rect x="670" y="90" width="260" height="120" rx="12" fill="#FFF8E7" stroke="#D4AF37" stroke-width="3"/>
+    <rect x="690" y="106" width="86" height="24" rx="5" fill="#D4AF37"/>
+    <text x="733" y="123" class="chip" fill="#111111" text-anchor="middle">ACTION</text>
+    <text x="800" y="165" class="title" text-anchor="middle">View Details</text>
+    <text x="800" y="192" class="sub" text-anchor="middle">remembers the name</text>
+  </g>
+  <g>
+    <rect x="980" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#111111" stroke-width="2.5"/>
+    <rect x="1000" y="106" width="86" height="24" rx="5" fill="none" stroke="#4A4538" stroke-width="1.5"/>
+    <text x="1043" y="123" class="chip" fill="#4A4538" text-anchor="middle">SCREEN</text>
+    <text x="1110" y="165" class="title" text-anchor="middle">Property details</text>
+    <text x="1110" y="192" class="sub" text-anchor="middle">4 numbers · map</text>
+  </g>
+  <g>
+    <rect x="1290" y="90" width="260" height="120" rx="12" fill="#fff" stroke="#111111" stroke-width="2.5"/>
+    <rect x="1310" y="106" width="86" height="24" rx="5" fill="none" stroke="#4A4538" stroke-width="1.5"/>
+    <text x="1353" y="123" class="chip" fill="#4A4538" text-anchor="middle">SCREEN</text>
+    <text x="1420" y="165" class="title" text-anchor="middle">Contract</text>
+    <text x="1420" y="192" class="sub" text-anchor="middle">form → .txt draft</text>
+  </g>
+
+  <line x1="312" y1="150" x2="356" y2="150" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="622" y1="150" x2="666" y2="150" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="932" y1="150" x2="976" y2="150" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1242" y1="150" x2="1286" y2="150" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="644" y="80" class="small" text-anchor="middle">pick one</text>
+  <text x="1264" y="80" class="small" text-anchor="middle">same property</text>
+
+  <!-- how search matches, under Properties -->
+  <rect x="50" y="260" width="570" height="200" rx="12" fill="#fff" stroke="rgba(17,17,17,0.25)" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="70" y="292" class="lane">SEARCH KEEPS A CARD WHEN THE WORDS ARE IN</text>
+  <text x="70" y="332" class="row">its name</text>
+  <text x="600" y="332" class="row-code" text-anchor="end">"villa" → Oasis Villa</text>
+  <text x="70" y="370" class="row">its city</text>
+  <text x="600" y="370" class="row-code" text-anchor="end">"aswan" → Aswan</text>
+  <text x="70" y="408" class="row">its type</text>
+  <text x="600" y="408" class="row-code" text-anchor="end">"house" → House</text>
+  <text x="70" y="442" class="small">no match → "No properties match your search."</text>
+  <line x1="490" y1="212" x2="490" y2="256" stroke="#4A4538" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+
+  <!-- what the click does, under View Details -->
+  <rect x="670" y="260" width="430" height="200" rx="12" fill="#fff" stroke="#D4AF37" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <text x="690" y="292" class="lane">ONE CLICK, THREE STEPS</text>
+  <text x="690" y="332" class="row">1  save the name</text>
+  <text x="1080" y="332" class="row-code" text-anchor="end">on_click</text>
+  <text x="690" y="370" class="row">2  menu gets Property details</text>
+  <text x="1080" y="370" class="row-code" text-anchor="end">app.py</text>
+  <text x="690" y="408" class="row">3  open that screen</text>
+  <text x="1080" y="408" class="row-code" text-anchor="end">switch_page</text>
+  <text x="690" y="442" class="small">find_property(name) fetches the record</text>
+  <line x1="800" y1="212" x2="800" y2="256" stroke="#8C6A16" stroke-width="2.5" marker-end="url(#arrow-gold)"/>
+
+  <!-- checks before the draft, under Contract -->
+  <rect x="1130" y="260" width="420" height="200" rx="12" fill="#fff" stroke="rgba(17,17,17,0.25)" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="1150" y="292" class="lane">CHECKS BEFORE THE DRAFT</text>
+  <text x="1150" y="332" class="row">name, national ID, phone filled</text>
+  <text x="1150" y="370" class="row">end date not before start date</text>
+  <text x="1150" y="408" class="row">"information is correct" ticked</text>
+  <text x="1150" y="442" class="small">then: download property_contract.txt</text>
+  <line x1="1420" y1="212" x2="1420" y2="256" stroke="#4A4538" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+
+  <!-- lane 2: what the session remembers -->
+  <rect x="20" y="540" width="1560" height="340" rx="18" fill="#FBFAF6" stroke="rgba(17,17,17,0.10)" stroke-width="2"/>
+  <text x="48" y="578" class="lane">WHAT THE SESSION REMEMBERS · GONE WHEN THE TAB CLOSES</text>
+
+  <text x="90" y="625" class="row-code">st.session_state.favorites</text>
+  <rect x="90" y="680" width="240" height="70" rx="35" fill="#fff" stroke="#4A4538" stroke-width="3"/>
+  <text x="210" y="723" class="state" fill="#4A4538" text-anchor="middle">♡ not saved</text>
+  <rect x="490" y="680" width="240" height="70" rx="35" fill="#FFF8E7" stroke="#D4AF37" stroke-width="3"/>
+  <text x="610" y="723" class="state" fill="#8C6A16" text-anchor="middle">♥ saved</text>
+  <line x1="332" y1="700" x2="486" y2="700" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="488" y1="732" x2="334" y2="732" stroke="#4A4538" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="410" y="690" class="small" text-anchor="middle">heart</text>
+  <text x="410" y="770" class="small" text-anchor="middle">heart again</text>
+  <text x="90" y="815" class="small">Heart buttons: Properties cards, Property details,</text>
+  <text x="90" y="840" class="small">and the remove button on Favorites.</text>
+
+  <line x1="800" y1="600" x2="800" y2="860" stroke="rgba(17,17,17,0.12)" stroke-width="2"/>
+
+  <text x="870" y="625" class="row-code">st.session_state.selected_property</text>
+  <rect x="870" y="680" width="260" height="70" rx="35" fill="#fff" stroke="#4A4538" stroke-width="3"/>
+  <text x="1000" y="723" class="state" fill="#4A4538" text-anchor="middle">nothing picked</text>
+  <rect x="1270" y="680" width="260" height="70" rx="35" fill="#FFF8E7" stroke="#D4AF37" stroke-width="3"/>
+  <text x="1400" y="723" class="state" fill="#8C6A16" text-anchor="middle">a property name</text>
+  <line x1="1132" y1="715" x2="1266" y2="715" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="1199" y="770" class="small" text-anchor="middle">View Details</text>
+  <text x="1000" y="800" class="small" text-anchor="middle">Details hidden</text>
+  <text x="1000" y="824" class="small" text-anchor="middle">from the menu</text>
+  <text x="1400" y="800" class="small" text-anchor="middle">Details in the menu;</text>
+  <text x="1400" y="824" class="small" text-anchor="middle">Contract starts on it</text>
+
+  <path d="M885,462 V515 H1400 V676" fill="none" stroke="#8C6A16" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#arrow-gold)"/>
+  <text x="1142" y="507" class="small" text-anchor="middle" fill="#8C6A16">step 1 writes the name here</text>
+</svg>
+</div>
+</body>
+</html>

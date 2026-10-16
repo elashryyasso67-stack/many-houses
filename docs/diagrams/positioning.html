@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Positioning</title>
+<!-- Positioning map. Dots are placed from the "Gap to target" notes in research.md, section 2. Move a dot by changing its left/top percent. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/diagram.css">
+<style>
+  .wrap { display: grid; grid-template-columns: 1010px 1fr; gap: 30px; }
+  .plot { position: relative; height: 730px; border-radius: 14px; background: #FBFAF6; border: 2px solid rgba(17,17,17,0.10); }
+  .q { position: absolute; width: 50%; height: 50%; }
+  .q.tr { right: 0; top: 0; background: rgba(212,175,55,0.13); border-top-right-radius: 14px; }
+  .ax { position: absolute; background: var(--ink); }
+  .ax.x { left: 30px; right: 30px; top: 50%; height: 2.5px; }
+  .ax.y { top: 30px; bottom: 30px; left: 50%; width: 2.5px; }
+  .al { position: absolute; font: 700 13px var(--mono); letter-spacing: 0.1em; color: var(--ink-soft); background: #FBFAF6; padding: 3px 8px; }
+  .dot { position: absolute; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+  .dot i { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--ink-soft); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--ink-soft); }
+  .dot b { font: 700 18px var(--sans); }
+  .dot span { display: block; font: 400 13.5px var(--sans); color: var(--ink-soft); }
+  .dot.us i { width: 34px; height: 34px; background: var(--accent); box-shadow: 0 0 0 3px var(--ink); }
+  .dot.us b { font: 600 26px var(--display); }
+  .side { display: flex; flex-direction: column; gap: 16px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="top">
+    <h1>Where we stand<span class="ar">موقعنا بين المنافسين</span></h1>
+    <span class="lane">positioning map · draft</span>
+  </div>
+  <div class="wrap">
+    <div class="plot">
+      <div class="q tr"></div>
+      <div class="ax x"></div><div class="ax y"></div>
+      <div class="al" style="left: 40px; top: 50%; transform: translateY(40%);">◀ CAIRO &amp; COMPOUNDS FIRST</div>
+      <div class="al" style="right: 40px; top: 50%; transform: translateY(40%);">EVERY CITY ▶</div>
+      <div class="al" style="left: 50%; top: 36px; transform: translateX(12px);">▲ SIMPLE · FOR FIRST-TIME SEARCHERS</div>
+      <div class="al" style="left: 50%; bottom: 36px; transform: translateX(12px);">▼ MANY TOOLS · FOR AGENTS &amp; INVESTORS</div>
+
+      <div class="dot us" style="left: 77%; top: 22%;"><i></i><div><b>manyhouses</b><span>10 cities · search · shortlist · draft</span></div></div>
+      <div class="dot" style="left: 72%; top: 39%;"><i></i><div><b>Facebook groups</b><span>everywhere, but no search or checks</span></div></div>
+      <div class="dot" style="left: 39%; top: 37%;"><i></i><div><b>Dubizzle</b><span>easy to post, mixed quality</span></div></div>
+      <div class="dot" style="left: 22%; top: 63%;"><i></i><div><b>Aqarmap</b><span>price guides, busy</span></div></div>
+      <div class="dot" style="left: 16%; top: 80%;"><i></i><div><b>Property Finder</b><span>EGP 12M–73M projects</span></div></div>
+      <div class="dot" style="left: 33%; top: 73%;"><i></i><div><b>Nawy</b><span>compounds + financing</span></div></div>
+      <div class="dot" style="left: 12%; top: 90%;"><i></i><div><b>Bayut</b><span>agents, new projects</span></div></div>
+      <div class="dot" style="left: 61%; top: 87%;"><i></i><div><b>Gov. platform</b><span>state &amp; developer units</span></div></div>
+    </div>
+    <div class="side">
+      <div class="box gold">
+        <span class="chip gold">Our space</span>
+        <h3>Simple, and every city</h3>
+        <p>The big portals compete for Cairo compounds and agents. manyhouses starts simple, in the cities they leave out.</p>
+      </div>
+      <div class="box">
+        <span class="chip">Why the dots sit there</span>
+        <ul>
+          <li>Dubizzle: about 157k of its 200k+ property ads are in Cairo [37].</li>
+          <li>Property Finder's featured projects cost EGP 12.4M–73.5M [32].</li>
+          <li>Nawy lists compounds from about 150 developers [25].</li>
+          <li>The government platform starts with 3,000+ units in New Alamein [23].</li>
+        </ul>
+      </div>
+      <div class="box soft">
+        <p><span class="todo">check the dots against your interviews and your Aswan ad counts (research.md, questions 1 and 13). Move any dot that is wrong.</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="foot">[n] = source number in docs/research.md</div>
+</div>
+</body>
+</html>

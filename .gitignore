@@ -1,0 +1,7 @@
+# Local tooling and notes, kept out of the shared repo.
+AGENTS.md
+CLAUDE.md
+ISSUES.md
+.claude/
+.agents/
+.vscode/

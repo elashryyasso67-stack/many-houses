@@ -23,8 +23,7 @@ The app is one Python program that uses [Streamlit](https://streamlit.io) to dra
 - `app_pages/` has one file for each screen. Each file draws its own screen and nothing else.
 - `.streamlit/config.toml` holds the colours and fonts (gold, white and black).
 - `images/` holds the logo and the banner. Property photos come from picsum.photos.
-- `marketing/` holds four short marketing documents: a one-pager, a pitch deck, social posts and a demo video script.
-- `docs/` holds the project documentation.
+- `docs/` holds the marketing kit: the marketing plan, pitch deck, poster, brand guide, social images and diagrams, with sourced market research in `docs/research.md`. Rebuild the PDFs and images with `python docs/build.py`. That needs `playwright` and `markdown-it-py`, which the app itself does not use.
 
 When you press **View Details**, the app remembers which property you picked. The Property details screen then appears in the menu and opens on that property.
 
@@ -70,4 +69,3 @@ These are the choices made to keep the code simple. Each one can be changed late
 - **Only Streamlit is installed.** It is pinned to version 1.64.0 in `requirements.txt`, the version this code was tested with.
 - **No secrets.** The app calls no paid service and needs no API key.
 
-See `ISSUES.md` for the list of copy and feature gaps still to fix.

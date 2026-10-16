@@ -1,0 +1,42 @@
+/* manyhouses brand: colours and fonts shared by the poster, slides, diagrams and documentation.
+   Colours come from the gold house-and-key logo (images/many_houses_logo.jpeg) and .streamlit/config.toml.
+   Diagrams also use these hex values directly in SVG attributes, so replace the same hex strings
+   in docs/diagrams/*.html when you change them:
+   #111111 ink · #D4AF37 gold · #8C6A16 gold-dark · #C99B38 warm · #F2CC5B warm-2 · #FFF8E7 paper */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap');
+
+:root {
+  --ink: #111111;        /* the app's sidebar black, and the logo's background */
+  --ink-2: #1E1C17;
+  --ink-soft: #4A4538;
+  --accent: #D4AF37;     /* the app's primary gold (config.toml), the logo's main gold */
+  --accent-dark: #8C6A16;/* darker gold, readable as text on a light page */
+  --warm: #C99B38;       /* the logo's deep gold */
+  --warm-2: #F2CC5B;     /* the logo's bright highlight */
+  --paper: #FFF8E7;      /* the app's cream secondary background (config.toml) */
+  --white: #FFFFFF;
+  --line: rgba(17, 17, 17, 0.14);
+  --todo-bg: #FFF1A8;    /* student placeholder highlight */
+  --todo-line: #D9A400;
+
+  --display: 'Jost', 'Inter', sans-serif;   /* geometric capitals like the MANY HOUSES banner */
+  --sans: 'Inter', system-ui, sans-serif;   /* the app's body font */
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --arabic: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.ar { font-family: var(--arabic); direction: rtl; unicode-bidi: isolate; }
+
+/* Student placeholder: anything in this style still has to be written before printing. */
+.todo {
+  background: var(--todo-bg);
+  color: #4A3B00;
+  border: 0.18em dashed var(--todo-line);
+  border-radius: 0.35em;
+  padding: 0.12em 0.4em;
+  font-style: normal;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.todo::before { content: "✏️ Student writes: "; font-weight: 700; }
+.todo.block { display: block; padding: 0.5em 0.7em; }

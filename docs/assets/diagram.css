@@ -1,0 +1,25 @@
+/* Shared look for the marketing diagrams in docs/diagrams/. Each diagram has one .canvas box; its size is the PNG size. */
+html, body { margin: 0; background: var(--white); }
+.canvas { position: relative; width: 1600px; height: 900px; box-sizing: border-box; padding: 40px 44px; font-family: var(--sans); color: var(--ink); overflow: hidden; }
+.lane { font: 700 14px var(--mono); letter-spacing: 0.16em; color: var(--ink-soft); text-transform: uppercase; }
+.lane .ar { letter-spacing: 0; font-size: 16px; margin-left: 8px; }
+.top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 22px; }
+.top h1 { margin: 0; font: 600 34px var(--display); letter-spacing: 0.01em; }
+.top h1 .ar { font-size: 22px; color: var(--ink-soft); margin-left: 12px; font-weight: 600; }
+.box { box-sizing: border-box; background: #fff; border: 2px solid rgba(17,17,17,0.14); border-radius: 14px; padding: 18px 22px; }
+.box.dark { background: var(--ink); color: #fff; border-color: var(--ink); }
+.box.gold { background: var(--paper); border: 3px solid var(--accent); }
+.box.soft { background: #FBFAF6; border-color: rgba(17,17,17,0.10); }
+.box.dash { border-style: dashed; }
+.box h3 { margin: 0 0 8px; font: 700 21px var(--sans); }
+.box p, .box li { margin: 0; font: 400 16px/1.45 var(--sans); color: var(--ink-soft); }
+.box.dark p, .box.dark li { color: rgba(255,255,255,0.78); }
+.box ul { margin: 0; padding-left: 20px; }
+.box li + li { margin-top: 4px; }
+.chip { display: inline-block; font: 700 12px var(--mono); letter-spacing: 0.12em; padding: 3px 9px; border-radius: 5px; border: 1.5px solid var(--ink-soft); color: var(--ink-soft); margin-bottom: 10px; text-transform: uppercase; }
+.chip.gold { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+.chip.ink { background: var(--ink); border-color: var(--ink); color: var(--accent); }
+.src { font: 500 13px var(--mono); color: var(--ink-soft); }
+.num { font: 600 44px/1 var(--display); color: var(--accent-dark); }
+.todo { font-size: 15px; line-height: 1.5; }
+.foot { position: absolute; left: 44px; right: 44px; bottom: 26px; font: 500 13px var(--mono); color: var(--ink-soft); }

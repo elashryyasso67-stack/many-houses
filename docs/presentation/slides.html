@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Pitch Deck</title>
+<!-- 12 slides, 1280 x 720 each, for a 5–7 minute pitch. Build the PDF with: python docs/build.py slides -->
+<!-- Yellow ✏️ boxes are for the student to write. Most offer options A/B/C: pick one, rewrite it in your words, and replace the whole yellow box. -->
+<!-- Market numbers come from docs/research.md; [n] is the source number there. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<style>
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #555; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-family: var(--sans); color: var(--ink); }
+  .slide { position: relative; width: 1280px; height: 720px; overflow: hidden; padding: 56px 72px; break-after: page;
+           background: #FDFBF6;
+           background-image: linear-gradient(rgba(17,17,17,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,17,0.035) 1px, transparent 1px);
+           background-size: 32px 32px; }
+  .slide.dark { background: var(--ink); color: #fff; }
+  .slide.hot { background: linear-gradient(120deg, var(--warm), var(--warm-2)); color: var(--ink); }
+
+  .kicker { font: 700 15px var(--mono); letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 14px; }
+  .dark .kicker { color: var(--accent); }
+  .hot .kicker { color: var(--ink); }
+  .kicker .ar { letter-spacing: 0; margin-left: 10px; font-size: 17px; }
+  h2 { font: 600 46px/1.1 var(--display); margin-bottom: 30px; }
+  h2 .todo { font-family: var(--sans); font-size: 22px; font-weight: 500; }
+  .foot { position: absolute; left: 72px; right: 72px; bottom: 28px; display: flex; justify-content: space-between;
+          font: 500 13px var(--mono); color: var(--ink-soft); }
+  .dark .foot { color: rgba(255,255,255,0.55); }
+  .hot .foot { color: rgba(17,17,17,0.7); }
+  .foot b { font-family: var(--display); font-weight: 600; letter-spacing: 0.04em; }
+  .src { font: 500 12px var(--mono); color: var(--accent-dark); }
+  .dark .src { color: var(--accent); }
+
+  .texture { position: absolute; inset: 0; padding: 20px 30px; display: flex; flex-wrap: wrap; align-content: flex-start;
+             justify-content: space-between; column-gap: 26px; color: var(--accent); opacity: 0.08; }
+  .texture span { font-size: 56px; line-height: 1.45; }
+  .texture .en { font-family: var(--display); font-weight: 600; letter-spacing: 0.08em; }
+  .texture .ar { font-family: var(--arabic); font-weight: 700; }
+  .glow { position: absolute; width: 560px; height: 560px; border-radius: 50%;
+          background: radial-gradient(circle, rgba(242,204,91,0.34) 0%, rgba(201,155,56,0.10) 52%, rgba(201,155,56,0) 72%); }
+  .tile { position: absolute; background: #000; border-radius: 72px; padding: 40px; box-shadow: 0 0 0 7px rgba(212,175,55,0.55); }
+  .tile img { display: block; width: 100%; height: 100%; }
+
+  .title-text { position: absolute; left: 72px; top: 140px; width: 680px; }
+  .wordmark { font: 500 92px/1 var(--display); letter-spacing: 0.06em; text-transform: uppercase; margin: 18px 0 26px -4px; color: #fff; white-space: nowrap; }
+  .wordmark .dot { color: var(--accent); }
+  .tagline { margin-bottom: 16px; }
+  .todo { font-size: 19px; line-height: 1.5; }
+
+  .cards { display: grid; gap: 22px; }
+  .cards.three { grid-template-columns: repeat(3, 1fr); }
+  .cards.four { grid-template-columns: repeat(4, 1fr); }
+  .card { background: #fff; border: 1.5px solid var(--line); border-radius: 14px; padding: 24px 26px; }
+  .cards.three .card { min-height: 300px; }
+  .dark .card { background: var(--ink-2); border-color: rgba(255,255,255,0.12); }
+  .card h3 { font-size: 24px; font-weight: 700; margin-bottom: 10px; }
+  .card p { font-size: 18px; line-height: 1.45; color: var(--ink-soft); }
+  .dark .card p { color: rgba(255,255,255,0.75); }
+  .card .icon { font: 600 40px var(--display); color: var(--accent-dark); display: block; margin-bottom: 10px; }
+
+  .bignums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 40px; }
+  .bignum { border-top: 2px solid var(--accent); padding-top: 14px; }
+  .bignum b { display: block; font: 600 56px/1 var(--display); color: var(--accent); white-space: nowrap; }
+  .bignum span { display: block; font-size: 19px; line-height: 1.4; color: rgba(255,255,255,0.78); margin-top: 8px; }
+  .why { margin-top: 70px; font-size: 26px; line-height: 1.5; max-width: 1000px; color: rgba(255,255,255,0.9); }
+  .why b { color: var(--accent); }
+
+  .steps { display: flex; align-items: center; gap: 22px; margin-top: 10px; }
+  .step { flex: 1; background: #FDFBF6; color: var(--ink); border-radius: 14px; padding: 26px 26px 30px; min-height: 240px; }
+  .step .n { font: 600 54px/1 var(--display); color: var(--accent-dark); }
+  .step h3 { font-size: 27px; margin: 14px 0 8px; }
+  .step p { font-size: 18px; line-height: 1.45; color: var(--ink-soft); }
+  .steps .arrow { font: 700 40px var(--mono); color: var(--ink); }
+
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .shot { border: 1.5px solid rgba(17,17,17,0.25); border-radius: 10px; overflow: hidden; background: #fff; }
+  .shot img { display: block; width: 100%; height: 360px; object-fit: cover; object-position: 0 top; }
+  .cap { font-size: 16px; color: var(--ink-soft); margin-top: 12px; line-height: 1.4; }
+
+  .demo-big { display: grid; grid-template-columns: 420px 1fr; gap: 40px; align-items: start; }
+  .demo-big .shot img { height: 560px; object-position: 0 4%; }
+  .points { list-style: none; display: grid; gap: 18px; margin-top: 8px; }
+  .points li { display: flex; gap: 14px; font-size: 19px; line-height: 1.4; }
+  .points li::before { content: ""; flex: none; width: 12px; height: 12px; margin-top: 8px; background: var(--accent); transform: rotate(45deg); }
+  .points b { display: block; font-size: 21px; }
+  .points span { color: rgba(255,255,255,0.75); }
+
+  .diagram { background: #fff; border: 1.5px solid var(--line); border-radius: 14px; padding: 12px; }
+  .diagram img { display: block; width: 100%; }
+  .diagram.fit { width: fit-content; margin: 0 auto; }
+  .diagram.fit img { width: auto; height: 455px; }
+  .side { display: grid; grid-template-columns: 1fr 300px; gap: 30px; align-items: start; }
+  .facts { display: grid; gap: 18px; }
+  .fact { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 16px; line-height: 1.4; color: var(--ink-soft); }
+  .fact b { display: block; font: 600 30px var(--display); color: var(--accent-dark); }
+
+  .gtm { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .gtm .card { padding: 18px 22px; }
+  .gtm .card h3 { font-size: 21px; margin-bottom: 6px; }
+  .gtm .card p { font-size: 16px; }
+  .split { display: grid; grid-template-columns: 1fr 380px; gap: 30px; align-items: start; }
+  .posts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .posts img { display: block; width: 100%; border-radius: 8px; border: 1.5px solid var(--line); }
+
+  .road { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .road .card { min-height: 420px; }
+  .road .card.now { background: var(--paper); border: 2px solid var(--accent); }
+  .road .card.now h3, .road .card.now li { color: var(--ink); }
+  .road .card ul { list-style: none; display: grid; gap: 10px; }
+  .road .card .todo { font-size: 15px; }
+  .road .card li { font-size: 17px; line-height: 1.4; color: rgba(255,255,255,0.85); padding-left: 22px; position: relative; }
+  .road .card li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+  .road .card.now li::before { content: "✓"; color: var(--accent-dark); }
+  .road .tag { font: 700 13px var(--mono); letter-spacing: 0.14em; color: var(--accent); display: block; margin-bottom: 8px; }
+  .road .card.now .tag { color: var(--accent-dark); }
+
+  .thanks { position: absolute; left: 72px; top: 96px; width: 740px; }
+  .thanks h1 { font: 600 76px/1.02 var(--display); margin-bottom: 26px; }
+  .thanks h1 em { font-style: normal; color: var(--accent); }
+  .asks { display: grid; gap: 12px; margin-bottom: 22px; }
+  .asks div { font-size: 21px; line-height: 1.4; padding-left: 22px; position: relative; color: rgba(255,255,255,0.9); }
+  .asks div::before { content: ""; position: absolute; left: 0; top: 10px; width: 10px; height: 10px; background: var(--accent); transform: rotate(45deg); }
+  .thanks .line { margin-bottom: 10px; }
+  .qrrow { display: flex; gap: 24px; align-items: center; margin-top: 26px; }
+  .qrrow .code { background: #fff; padding: 10px; }
+  .qrrow img { display: block; width: 140px; height: 140px; image-rendering: pixelated; }
+  .qrrow p { font: 500 17px/1.6 var(--mono); }
+  .qrrow b { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<!-- 1 · Title -->
+<section class="slide dark">
+  <div class="texture">
+    <span class="en">HOME</span><span class="ar">بيت</span><span class="en">KEY</span><span class="ar">مفتاح</span><span class="en">VILLA</span>
+    <span class="ar">شقة</span><span class="en">NILE</span><span class="ar">أسوان</span><span class="en">CAIRO</span><span class="ar">إيجار</span>
+    <span class="en">SIWA</span><span class="ar">بيع</span><span class="en">LUXOR</span><span class="ar">فيلا</span><span class="en">RENT</span>
+    <span class="ar">النيل</span><span class="en">SEA</span><span class="ar">سكن</span>
+  </div>
+  <div class="glow" style="right: 20px; top: 70px;"></div>
+  <div class="tile" style="left: 850px; top: 170px; width: 350px; height: 350px;"><img src="../assets/mark.svg" alt="manyhouses mark"></div>
+  <div class="title-text">
+    <div class="kicker">Real estate · Egypt · 10 cities</div>
+    <div class="wordmark">many<span class="dot">·</span>houses</div>
+    <div class="tagline"><span class="todo">a 2–4 word tagline. Options: A "Every city. One search." · B "Your key to any city." · C "بيتك في أي مدينة"</span></div>
+    <div><span class="todo">one sentence: what can someone do with manyhouses? Option: "Search homes from Alexandria to Aswan, save the ones you love, and read the contract before you meet anyone."</span></div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Afro-Asian Forum for Technology and Innovation · Marketing</span><span>1</span></div>
+</section>
+
+<!-- 2 · The problem -->
+<section class="slide">
+  <div class="kicker">01 · The problem <span class="ar">المشكلة</span></div>
+  <h2><span class="todo">a one-line headline. Options: A "Finding a home shouldn't take ten apps." · B "Cairo gets the portals. Everyone else gets Facebook."</span></h2>
+  <div class="cards three">
+    <div class="card"><span class="icon">01</span><h3>Scattered</h3><p>Homes are spread across brokers, Facebook groups and five or more portals. Buyers check them one by one.</p></div>
+    <div class="card"><span class="icon">02</span><h3>Cairo-first</h3><p>About 157k of Dubizzle's 200k+ property ads are in Cairo <span class="src">[37]</span>. Property Finder's featured projects start at EGP 12.4M <span class="src">[32]</span>.</p></div>
+    <div class="card"><span class="icon">03</span><h3>Hard to trust</h3><p>Prices hidden "in private", duplicate and fake listings. The government launched a platform in 2025 to remove them <span class="src">[24]</span>.</p></div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · [n] = source in docs/research.md</span><span>2</span></div>
+</section>
+
+<!-- 3 · The market -->
+<section class="slide dark">
+  <div class="kicker">02 · The market <span class="ar">السوق</span></div>
+  <h2>A country on the move.</h2>
+  <div class="bignums">
+    <div class="bignum"><b>108M</b><span>people in Egypt, CAPMAS 2025 <span class="src">[1]</span></span></div>
+    <div class="bignum"><b>936,739</b><span>marriage contracts in 2024, each a possible new home <span class="src">[3]</span></span></div>
+    <div class="bignum"><b>98.2M</b><span>internet users, 82.7% of people <span class="src">[5]</span></span></div>
+    <div class="bignum"><b>$36.5B</b><span>sent home by Egyptians abroad in FY2024/25 <span class="src">[20]</span></span></div>
+  </div>
+  <p class="why">On 6 March 2024 the pound fell from about <b>EGP 31</b> to about <b>EGP 50</b> per dollar in one day <span class="src">[16]</span>. Families keep their savings in homes, and they search for them online.</p>
+  <div class="foot"><span><b>MANY·HOUSES</b> · [n] = source in docs/research.md</span><span>3</span></div>
+</section>
+
+<!-- 4 · Who it's for -->
+<section class="slide">
+  <div class="kicker">03 · Who it's for <span class="ar">لمن هذا التطبيق</span></div>
+  <h2 style="margin-bottom: 18px;"><span class="todo">a headline about the people you chose. Option: "Built for everyone the big portals skip."</span></h2>
+  <div class="diagram fit"><img src="../diagrams/persona.png" alt="Three persona options"></div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Property listings across Egypt</span><span>4</span></div>
+</section>
+
+<!-- 5 · Our solution -->
+<section class="slide hot">
+  <div class="kicker">04 · Our solution <span class="ar">الحل</span></div>
+  <h2>Search. Save. Draft.</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Search</h3><p>Any of 10 cities, by name, city or type. Price, rooms, bathrooms and area on every card.</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">2</div><h3>Save</h3><p>Open the details and the map pin. Tap the heart to build a shortlist.</p></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">3</div><h3>Draft</h3><p>Fill in the contract form and download a draft to read before you meet anyone.</p></div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Property listings across Egypt</span><span>5</span></div>
+</section>
+
+<!-- 6 · Demo: browse -->
+<section class="slide">
+  <div class="kicker">05 · Demo <span class="ar">عرض</span></div>
+  <h2>Every city, every number, up front.</h2>
+  <div class="pair">
+    <div><div class="shot"><img src="../screenshots/search-cards.jpg" alt="Search results for villa"></div><p class="cap">Search "villa": every villa in Cairo, Hurghada, Marsa Alam and Siwa.</p></div>
+    <div><div class="shot"><img src="../screenshots/details-main.jpg" alt="Property details screen"></div><p class="cap">Property details: price, rooms, bathrooms and area, then the details and the map.</p></div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Live: many-houses.streamlit.app</span><span>6</span></div>
+</section>
+
+<!-- 7 · Demo: shortlist and draft -->
+<section class="slide dark">
+  <div class="demo-big">
+    <div>
+      <div class="kicker">05 · Demo <span class="ar">عرض</span></div>
+      <h2>From shortlist to contract draft.</h2>
+      <ul class="points">
+        <li><div><b>Save with a heart</b><span>On every card and details page. Favorites list them all.</span></div></li>
+        <li><div><b>Pick sale or rent</b><span>The contract starts on the property you picked.</span></div></li>
+        <li><div><b>Checked before download</b><span>Name, national ID and phone filled, end date after start.</span></div></li>
+        <li><div><b>Read it first</b><span>A text draft to take to a lawyer before signing.</span></div></li>
+      </ul>
+    </div>
+    <div class="shot"><img src="../screenshots/contract-main.jpg" alt="Contract screen"></div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Live: many-houses.streamlit.app</span><span>7</span></div>
+</section>
+
+<!-- 8 · Competition -->
+<section class="slide">
+  <div class="kicker">06 · Competition <span class="ar">المنافسون</span></div>
+  <h2 style="margin-bottom: 18px;">Simple, and every city.</h2>
+  <div class="side">
+    <div class="diagram"><img src="../diagrams/positioning.png" alt="Positioning map"></div>
+    <div class="facts">
+      <div class="fact"><b>US$525M</b>stake sold in Property Finder's group, 2025 <span class="src">[34]</span></div>
+      <div class="fact"><b>US$52M</b>Series A for Nawy, a compound-focused broker <span class="src">[25]</span></div>
+      <div class="fact"><b>EGP 0</b>for manyhouses to run today: free hosting, one library</div>
+    </div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · [n] = source in docs/research.md</span><span>8</span></div>
+</section>
+
+<!-- 9 · Business model -->
+<section class="slide">
+  <div class="kicker">07 · Business model <span class="ar">نموذج العمل</span></div>
+  <h2 style="margin-bottom: 16px;"><span class="todo">how you will earn. Options: A "Free to list, pay to stand out." · B "Free for founding partners, then a small monthly plan." · C "We earn when our brokers close a deal."</span></h2>
+  <div class="diagram fit"><img src="../diagrams/canvas.png" alt="Business Model Canvas"></div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Property listings across Egypt</span><span>9</span></div>
+</section>
+
+<!-- 10 · Go-to-market -->
+<section class="slide">
+  <div class="kicker">08 · Go-to-market <span class="ar">خطة الوصول للسوق</span></div>
+  <h2 style="margin-bottom: 22px;">Organic first, near-zero budget.</h2>
+  <div class="split">
+    <div>
+      <div class="gtm">
+        <div class="card"><h3>Facebook groups</h3><p>Post in the city groups where people already look for flats. Facebook ads can reach 51.6M people <span class="src">[5]</span>.</p></div>
+        <div class="card"><h3>Instagram</h3><p>Weekly posts and stories from the social kit, all made from real screenshots.</p></div>
+        <div class="card"><h3>Founding partners</h3><p>Visit brokers and owners city by city with a QR flyer and the live demo.</p></div>
+        <div class="card"><h3>Events</h3><p>The poster and QR code at forums, universities and community events.</p></div>
+      </div>
+      <p style="margin-top: 18px;"><span class="todo">your campaign idea in one line. Options: A "#MyCityToo: one home from every city, every week" · B "Founding 50: the first 50 brokers list free" · C "Show your city: people share the street they want to live on"</span></p>
+    </div>
+    <div class="posts">
+      <img src="../social/ig-launch.png" alt="Instagram launch post">
+      <img src="../social/ig-partners.png" alt="Instagram partners post">
+    </div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · [n] = source in docs/research.md</span><span>10</span></div>
+</section>
+
+<!-- 11 · Roadmap -->
+<section class="slide dark">
+  <div class="kicker">09 · Roadmap <span class="ar">خارطة الطريق</span></div>
+  <h2 style="margin-bottom: 24px;">A working prototype today. Real homes next.</h2>
+  <div class="road">
+    <div class="card now"><span class="tag">NOW · BUILT</span><h3>The prototype</h3><ul>
+      <li>10 screens, live on the web</li>
+      <li>12 sample listings in 10 cities</li>
+      <li>Search, details, map, favorites</li>
+      <li>Contract draft download</li></ul></div>
+    <div class="card"><span class="tag">NEXT</span><h3>Real homes</h3><ul>
+      <li>Real listings from founding partners</li>
+      <li>Real photos, not placeholders</li>
+      <li>Prices in EGP, with installment plans</li>
+      <li>A "checked by a partner" badge</li>
+      <li>WhatsApp contact that reaches a person</li></ul><p style="margin-top: 14px;"><span class="todo">when? e.g. "in 3 months"</span></p></div>
+    <div class="card"><span class="tag">LATER</span><h3>Grow</h3><ul>
+      <li>Accounts that keep favorites between visits</li>
+      <li>Partners add their own listings</li>
+      <li>A visit counter for the funnel</li>
+      <li>An Arabic version of the app</li></ul><p style="margin-top: 14px;"><span class="todo">when? e.g. "in 1 year"</span></p></div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Property listings across Egypt</span><span>11</span></div>
+</section>
+
+<!-- 12 · The ask -->
+<section class="slide dark">
+  <div class="glow" style="right: 20px; top: 70px;"></div>
+  <div class="tile" style="left: 880px; top: 190px; width: 310px; height: 310px;"><img src="../assets/mark.svg" alt="manyhouses mark"></div>
+  <div class="thanks">
+    <h1>Try it.<br><em>Partner with us.</em></h1>
+    <div class="asks">
+      <div>Scan the code and search your own city.</div>
+      <div>Brokers and owners: list your first homes with us.</div>
+    </div>
+    <div class="line"><span class="todo">your name · team or school · email</span></div>
+    <div class="qrrow">
+      <div class="code"><img src="../assets/qr-app.svg" alt="QR code for many-houses.streamlit.app"></div>
+      <p>Scan to try the live app:<br><b>many-houses.streamlit.app</b><br>Thank you · شكرًا</p>
+    </div>
+  </div>
+  <div class="foot"><span><b>MANY·HOUSES</b> · Working prototype with sample listings</span><span>12</span></div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses SWOT</title>
+<!-- SWOT. Strengths and weaknesses come from the app and README Limits; opportunities and threats from research.md. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/diagram.css">
+<style>
+  .sw { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 16px; height: 740px; }
+  .sw .box { position: relative; padding: 26px 30px 18px 118px; }
+  .L { position: absolute; left: 24px; top: 18px; font: 600 76px/1 var(--display); }
+  .sw h3 { font: 700 27px var(--sans); margin: 4px 0 10px; }
+  .sw h3 .ar { font-size: 17px; color: var(--ink-soft); margin-left: 8px; font-weight: 600; }
+  .sw li { font-size: 21px; line-height: 1.45; color: var(--ink); }
+  .sw li + li { margin-top: 8px; }
+  .s .L { color: var(--accent-dark); }
+  .w .L { color: var(--ink-soft); }
+  .o .L { color: var(--accent); }
+  .t .L { color: #fff; }
+  .t h3 { color: #fff; }
+  .t h3 .ar { color: rgba(255,255,255,0.6); }
+  .t li { color: rgba(255,255,255,0.88); }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="top">
+    <h1>SWOT<span class="ar">نقاط القوة والضعف والفرص والتهديدات</span></h1>
+    <span class="lane">inside: the app · outside: the market</span>
+  </div>
+  <div class="sw">
+    <div class="box gold s"><span class="L">S</span><h3>Strengths<span class="ar">نقاط القوة</span></h3><ul>
+      <li>10 cities from day one, from Alexandria to Aswan and Siwa</li>
+      <li>Simple: search, details, map, favorites, all without signing up</li>
+      <li>A contract draft to read before meeting a broker</li>
+      <li>Costs nothing to run: one free library and free hosting</li></ul></div>
+    <div class="box w"><span class="L">W</span><h3>Weaknesses<span class="ar">نقاط الضعف</span></h3><ul>
+      <li>12 sample listings, and the photos are random placeholders</li>
+      <li>Prices show in $, not EGP. Nothing is checked or verified yet</li>
+      <li>No real accounts. Favorites end when the tab closes</li>
+      <li>Contact us sends nothing, and the app can't count visits</li></ul></div>
+    <div class="box soft o"><span class="L">O</span><h3>Opportunities<span class="ar">الفرص</span></h3><ul>
+      <li>936,739 marriage contracts in 2024: new homes needed [3]</li>
+      <li>Small cities are thin on the big portals [37]</li>
+      <li>Trust is a known problem; even the government is fighting fake listings [24]</li>
+      <li>98.2M internet users [5] and US$36.5B sent home from abroad [20]</li></ul></div>
+    <div class="box dark t"><span class="L">T</span><h3>Threats<span class="ar">التهديدات</span></h3><ul>
+      <li>Rich rivals: Property Finder (US$525M stake) [34], Nawy (US$52M) [25]</li>
+      <li>A free government platform [24], and Facebook groups cost nothing</li>
+      <li>The market is cooling: top-10 developer sales −6.5% in Q1 2026 [13]</li>
+      <li>One fake listing could break trust in a new name</li></ul></div>
+  </div>
+  <div class="foot">[n] = source number in docs/research.md · Weaknesses are listed in the README's Limits section.</div>
+</div>
+</body>
+</html>

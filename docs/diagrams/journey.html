@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Journey</title>
+<!-- Customer journey: each stage, what the person does, the app screen that serves it (from app_pages/), the pain today (research.md), and the number to watch. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/diagram.css">
+<style>
+  .canvas { height: 680px; }
+  .j { display: grid; grid-template-columns: 150px repeat(6, 1fr); gap: 10px; }
+  .h { background: var(--ink); color: #fff; border-radius: 12px; padding: 14px 14px 12px; position: relative; }
+  .h .n { font: 700 13px var(--mono); color: var(--accent); letter-spacing: 0.12em; }
+  .h b { display: block; font: 600 24px var(--display); margin-top: 4px; }
+  .h .ar { font-size: 15px; color: rgba(255,255,255,0.65); }
+  .h.next { background: #fff; color: var(--ink); border: 2.5px dashed var(--ink-soft); }
+  .h.next .ar { color: var(--ink-soft); }
+  .rl { font: 700 13px var(--mono); letter-spacing: 0.12em; color: var(--ink-soft); padding-top: 14px; }
+  .c { background: #fff; border: 2px solid rgba(17,17,17,0.12); border-radius: 12px; padding: 12px 14px; font: 400 15px/1.4 var(--sans); color: var(--ink-soft); }
+  .c.screen { background: var(--paper); border-color: var(--accent); color: var(--ink); font-weight: 500; }
+  .c.screen code { font: 500 12.5px var(--mono); color: var(--accent-dark); display: block; margin-top: 4px; }
+  .c.pain { background: #FBFAF6; }
+  .c.kpi { font: 500 14.5px/1.4 var(--mono); color: var(--ink); }
+  .c.future { border-style: dashed; }
+  .arrow { position: absolute; right: -14px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-left: 12px solid var(--ink); border-top: 10px solid transparent; border-bottom: 10px solid transparent; z-index: 2; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="top">
+    <h1>The customer journey<span class="ar">رحلة العميل</span></h1>
+    <span class="lane">from first post to contract draft</span>
+  </div>
+  <div class="j">
+    <div></div>
+    <div class="h"><span class="n">01</span><b>Discover</b><span class="ar">يكتشف</span><i class="arrow"></i></div>
+    <div class="h"><span class="n">02</span><b>Search</b><span class="ar">يبحث</span><i class="arrow"></i></div>
+    <div class="h"><span class="n">03</span><b>Compare</b><span class="ar">يقارن</span><i class="arrow"></i></div>
+    <div class="h"><span class="n">04</span><b>Shortlist</b><span class="ar">يختار</span><i class="arrow"></i></div>
+    <div class="h"><span class="n">05</span><b>Act</b><span class="ar">يتواصل</span><i class="arrow"></i></div>
+    <div class="h next"><span class="n">06 · NEXT</span><b>Visit &amp; sign</b><span class="ar">يزور ويوقّع</span></div>
+
+    <div class="rl">DOING</div>
+    <div class="c">Sees a post in a Facebook group or on Instagram, or scans a QR code.</div>
+    <div class="c">Types a city or a type: "aswan", "villa".</div>
+    <div class="c">Opens a property: price, rooms, bathrooms, area, map.</div>
+    <div class="c">Taps the heart on the ones worth a visit.</div>
+    <div class="c">Fills the contract form, or sends a question.</div>
+    <div class="c future">Visits with a partner broker and signs a reviewed contract.</div>
+
+    <div class="rl">APP SCREEN</div>
+    <div class="c screen">Welcome<code>landing.py</code></div>
+    <div class="c screen">Properties<code>home.py</code></div>
+    <div class="c screen">Property details<code>details.py</code></div>
+    <div class="c screen">Favorites<code>favorites.py</code></div>
+    <div class="c screen">Contract · Contact us<code>contract.py · contact_us.py</code></div>
+    <div class="c future">Not built yet: partner brokers, viewing requests</div>
+
+    <div class="rl">PAIN TODAY</div>
+    <div class="c pain">Ads are spread across groups, brokers and 5+ portals.</div>
+    <div class="c pain">Big portals are Cairo-first, so small cities barely appear [37].</div>
+    <div class="c pain">Prices hidden "in private". Duplicate and fake listings [24].</div>
+    <div class="c pain">Screenshots and saved posts get lost in chats.</div>
+    <div class="c pain">Contract terms only show up at the broker's desk.</div>
+    <div class="c pain">Fake units and forged contracts exist [52].</div>
+
+    <div class="rl">NUMBER TO WATCH</div>
+    <div class="c kpi">post reach · QR scans</div>
+    <div class="c kpi">visits · searches</div>
+    <div class="c kpi">details opened</div>
+    <div class="c kpi">favorites saved</div>
+    <div class="c kpi">drafts downloaded · messages</div>
+    <div class="c kpi future">deals with partners</div>
+  </div>
+  <div class="foot">[n] = source number in docs/research.md · The app does not count these numbers yet (see Roadmap: analytics).</div>
+</div>
+</body>
+</html>

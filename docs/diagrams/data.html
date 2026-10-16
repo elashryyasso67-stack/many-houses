@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Data</title>
+<!-- Where manyhouses keeps its data: one Python list in data.py and two values in the session. There is no database. The .canvas size is the PNG size. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<style>
+  html, body { margin: 0; background: var(--white); }
+  .canvas { position: relative; width: 1600px; height: 900px; font-family: var(--mono); color: var(--ink); }
+  svg { position: absolute; inset: 0; }
+  .table { position: absolute; background: #fff; border: 2.5px solid var(--ink); border-radius: 12px; overflow: hidden; }
+  .head { height: 52px; box-sizing: border-box; padding: 0 18px; display: flex; align-items: center; justify-content: space-between;
+          background: var(--ink); color: #fff; font: 700 21px var(--mono); }
+  .head em { font-style: normal; font-size: 14px; color: var(--accent); letter-spacing: 0.08em; }
+  .col { height: 30px; box-sizing: border-box; padding: 0 18px; display: flex; justify-content: space-between; align-items: center;
+         font-size: 16px; border-top: 1px solid rgba(17,17,17,0.07); }
+  .col em { font-style: normal; font-size: 13px; color: var(--ink-soft); }
+  .col.pk span { font-weight: 700; }
+  .col.pk em { color: var(--accent-dark); font-weight: 700; letter-spacing: 0.08em; }
+  .col.fk span, .col.fk em { color: var(--accent-dark); font-weight: 700; }
+  .col.opt { color: var(--ink-soft); background: #FBFAF6; }
+  .box { position: absolute; box-sizing: border-box; border-radius: 12px; padding: 18px 22px; }
+  .box b { display: block; font-size: 22px; margin-bottom: 8px; }
+  .box p { margin: 0; font: 400 16px/1.45 var(--sans); color: var(--ink-soft); }
+  .fn { background: #FFF8E7; border: 3px solid var(--accent); }
+  .out { background: #fff; border: 2px dashed rgba(17,17,17,0.3); }
+  .chip { display: inline-block; font: 700 13px var(--mono); letter-spacing: 0.12em; padding: 3px 10px; border-radius: 5px; margin-bottom: 10px; }
+  .fn .chip { background: var(--accent); color: var(--ink); }
+  .out .chip { border: 1.5px solid var(--ink-soft); color: var(--ink-soft); }
+  .not { position: absolute; left: 40px; right: 40px; top: 560px; height: 105px; box-sizing: border-box; border: 2px dashed rgba(17,17,17,0.25);
+         border-radius: 12px; padding: 18px 24px; background: #FBFAF6; }
+  .not .lane { font: 700 14px var(--mono); letter-spacing: 0.16em; color: var(--ink-soft); margin-bottom: 14px; }
+  .not .items { display: flex; gap: 40px; font: 500 19px var(--sans); }
+  .not .items span::before { content: "✕  "; color: var(--accent-dark); font-weight: 700; }
+  .key { position: absolute; left: 40px; top: 695px; font-size: 15px; color: var(--ink-soft); }
+  .key i { display: inline-block; width: 26px; height: 3px; background: var(--accent-dark); vertical-align: middle; margin-right: 8px; }
+  .legend { position: absolute; left: 40px; bottom: 40px; right: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .legend div { background: #FBFAF6; border: 2px solid rgba(17,17,17,0.10); border-radius: 12px; padding: 14px 18px; }
+  .legend b { display: block; font-size: 13px; letter-spacing: 0.14em; color: var(--ink-soft); margin-bottom: 6px; }
+  .legend span { font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+<svg width="1600" height="900">
+  <defs>
+    <marker id="to" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8C6A16"/></marker>
+    <marker id="from" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6"><circle cx="5" cy="5" r="4" fill="#fff" stroke="#8C6A16" stroke-width="2"/></marker>
+  </defs>
+  <!-- session values -> find_property -> the name in data.py -->
+  <path d="M1100,107 C1050,107 1050,190 1004,200" fill="none" stroke="#8C6A16" stroke-width="2.5" marker-start="url(#from)" marker-end="url(#to)"/>
+  <path d="M1100,137 C1060,137 1060,220 1004,230" fill="none" stroke="#8C6A16" stroke-width="2.5" marker-start="url(#from)" marker-end="url(#to)"/>
+  <path d="M600,212 C560,212 550,107 504,107" fill="none" stroke="#8C6A16" stroke-width="2.5" marker-end="url(#to)"/>
+  <!-- the picked property starts the contract form -->
+  <path d="M800,297 V356" fill="none" stroke="#4A4538" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#to)"/>
+</svg>
+
+<div class="table" style="left: 40px; top: 40px; width: 460px;">
+  <div class="head"><span>PROPERTIES</span><em>data.py · 12 records</em></div>
+  <div class="col pk"><span>name</span><em>THE ID</em></div>
+  <div class="col"><span>image</span><em>picsum.photos link</em></div>
+  <div class="col"><span>place</span><em>city</em></div>
+  <div class="col"><span>type</span><em>Apartment · Villa · …</em></div>
+  <div class="col"><span>price</span><em>whole number</em></div>
+  <div class="col"><span>rooms</span><em>whole number</em></div>
+  <div class="col"><span>bathrooms</span><em>whole number</em></div>
+  <div class="col"><span>area</span><em>sq ft</em></div>
+  <div class="col"><span>latitude</span><em>for the map</em></div>
+  <div class="col"><span>longitude</span><em>for the map</em></div>
+  <div class="col opt"><span>image2 · image3</span><em>optional, 1 record</em></div>
+</div>
+
+<div class="box fn" style="left: 600px; top: 130px; width: 400px; height: 165px;">
+  <span class="chip">FUNCTION</span>
+  <b>find_property(name)</b>
+  <p>Walks the list until a name matches, or gives back None.</p>
+</div>
+
+<div class="box out" style="left: 600px; top: 360px; width: 400px; height: 155px;">
+  <span class="chip">DOWNLOAD</span>
+  <b>property_contract.txt</b>
+  <p>Built from the Contract form. Handed to the browser, never kept.</p>
+</div>
+
+<div class="table" style="left: 1100px; top: 40px; width: 460px;">
+  <div class="head"><span>st.session_state</span><em>this tab only</em></div>
+  <div class="col fk"><span>favorites</span><em>list of names</em></div>
+  <div class="col fk"><span>selected_property</span><em>one name</em></div>
+  <div class="col opt"><span>form boxes</span><em>what was typed</em></div>
+</div>
+
+<div class="box" style="left: 1100px; top: 200px; width: 460px; height: 150px; border: 2px solid rgba(17,17,17,0.10); background: #FBFAF6;">
+  <b style="font-size: 18px;">Names, not copies</b>
+  <p>The session keeps only property names. Every screen looks the rest up in data.py, so a renamed property drops out of favorites.</p>
+</div>
+
+<div class="not">
+  <div class="lane">NOT IN THIS APP</div>
+  <div class="items"><span>a database</span><span>accounts or passwords</span><span>messages sent anywhere</span><span>anything kept after the tab closes</span></div>
+</div>
+
+<div class="key"><i></i>each line goes from a stored name (○) to where it is looked up (▶)</div>
+
+<div class="legend">
+  <div><b>PLACE · 10 CITIES</b><span>Cairo ×3 · Giza · Alexandria · Hurghada · Sharm · Marsa Alam · Luxor · Aswan · Siwa · New Capital</span></div>
+  <div><b>TYPE · 4 KINDS</b><span>Apartment ×5 · Villa ×4 · House ×2 · Penthouse ×1</span></div>
+  <div><b>PRICE</b><span>$950,000 (Aswan) to $8,500,000 (Hurghada)</span></div>
+  <div><b>AREA</b><span>95 sq ft (Alexandria) to 350 sq ft (Hurghada)</span></div>
+</div>
+</div>
+</body>
+</html>

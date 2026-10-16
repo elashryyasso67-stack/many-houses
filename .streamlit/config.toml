@@ -1,0 +1,20 @@
+[theme]
+primaryColor = "#D4AF37"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#FFF8E7"
+textColor = "#111111"
+borderColor = "#D4AF37"
+baseRadius = "12px"
+buttonRadius = "12px"
+baseFontSize = 15
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Playfair Display:https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap"
+linkColor = "#D4AF37"
+linkUnderline = false
+
+[theme.sidebar]
+backgroundColor = "#111111"
+secondaryBackgroundColor = "#1A1A1A"
+textColor = "#FFFFFF"
+borderColor = "#D4AF37"
+primaryColor = "#D4AF37"

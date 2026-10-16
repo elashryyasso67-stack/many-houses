@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Funnel</title>
+<!-- Marketing funnel: each stage, the app action that proves it, and how to count it. Targets are the student's choice. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/diagram.css">
+<style>
+  .canvas { height: 790px; }
+  .wrap { display: grid; grid-template-columns: 1fr 470px; gap: 34px; align-items: start; }
+  .stage { display: grid; grid-template-columns: 1fr 330px; gap: 18px; align-items: center; margin-bottom: 10px; }
+  .bar { height: 92px; display: flex; align-items: center; justify-content: space-between; padding: 0 26px; box-sizing: border-box; color: #fff; margin: 0 auto;
+         clip-path: polygon(0 0, 100% 0, calc(100% - 26px) 100%, 26px 100%); }
+  .bar b { font: 600 27px var(--display); }
+  .bar span { font: 500 14px var(--mono); opacity: 0.85; }
+  .bar .ar { font-size: 17px; font-family: var(--arabic); }
+  .how { font: 400 15px/1.4 var(--sans); color: var(--ink-soft); }
+  .how code { font: 500 13px var(--mono); color: var(--accent-dark); }
+  .s1 .bar { width: 100%; background: #111111; }
+  .s2 .bar { width: 89%; background: #2B2720; }
+  .s3 .bar { width: 78%; background: #4A4538; }
+  .s4 .bar { width: 67%; background: #8C6A16; }
+  .s5 .bar { width: 56%; background: #C99B38; color: #111; }
+  .s6 .bar { width: 45%; background: #fff; color: var(--ink); border: 0; outline: 2.5px dashed var(--ink-soft); outline-offset: -3px; clip-path: none; border-radius: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="top">
+    <h1>The funnel<span class="ar">قمع التسويق</span></h1>
+    <span class="lane">what we count at each step</span>
+  </div>
+  <div class="wrap">
+    <div>
+      <div class="stage s1"><div class="bar"><b>Reach</b><span class="ar">الوصول</span></div><div class="how">People who see a post or a QR code. <code>Facebook / Instagram insights</code></div></div>
+      <div class="stage s2"><div class="bar"><b>Visit</b><span class="ar">الزيارة</span></div><div class="how">People who open the app. <code>link clicks · QR scans</code></div></div>
+      <div class="stage s3"><div class="bar"><b>Explore</b><span class="ar">الاستكشاف</span></div><div class="how">Search, then open a property. <code>home.py → details.py</code></div></div>
+      <div class="stage s4"><div class="bar"><b>Save</b><span class="ar">الحفظ</span></div><div class="how">Tap the heart. <code>favorites</code></div></div>
+      <div class="stage s5"><div class="bar"><b>Act</b><span class="ar">التواصل</span></div><div class="how">Download a contract draft or send a message. <code>contract.py · contact_us.py</code></div></div>
+      <div class="stage s6"><div class="bar"><b>Deal</b><span class="ar">الصفقة</span></div><div class="how">A visit or deal with a partner broker. <code>next: not built</code></div></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div class="box dark">
+        <span class="chip ink">Honest gap</span>
+        <h3 style="color: #fff;">The app can't count yet</h3>
+        <p>The steps from Explore to Act happen inside the app, which has no counter today. Social insights and QR scans can be counted from day one. An in-app counter is on the roadmap.</p>
+      </div>
+      <div class="box">
+        <span class="chip">First-month targets</span>
+        <p><span class="todo">set one number per step, e.g. Reach 5,000 · Visit 300 · Explore 150 · Save 60 · Act 20 · founding partners 5. Pick numbers you can explain.</span></p>
+      </div>
+      <div class="box soft"><p>Each step keeps only some people from the step above. That is why the bars get narrower. The biggest drop shows where to improve first.</p></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

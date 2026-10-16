@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>manyhouses Business Model Canvas</title>
+<!-- Business Model Canvas. Facts come from the app and research.md; the two yellow boxes are the student's choices. -->
+<link rel="stylesheet" href="../assets/brand.css">
+<link rel="stylesheet" href="../assets/diagram.css">
+<style>
+  .bmc { display: grid; grid-template-columns: repeat(10, 1fr); grid-template-rows: 300px 210px 200px; gap: 10px; }
+  .cell { box-sizing: border-box; background: #fff; border: 2px solid rgba(17,17,17,0.16); border-radius: 12px; padding: 14px 16px; overflow: hidden; }
+  .cell h4 { margin: 0 0 8px; font: 700 13px var(--mono); letter-spacing: 0.12em; color: var(--accent-dark); text-transform: uppercase; }
+  .cell h4 .ar { font-size: 14px; letter-spacing: 0; color: var(--ink-soft); margin-left: 6px; }
+  .cell ul { margin: 0; padding-left: 18px; }
+  .cell li { font: 400 16.5px/1.4 var(--sans); color: var(--ink); }
+  .cell li + li { margin-top: 3px; }
+  .cell li em { font-style: normal; color: var(--ink-soft); }
+  .vp { background: var(--paper); border: 3px solid var(--accent); }
+  .kp { grid-column: 1 / 3; grid-row: 1 / 3; }
+  .ka { grid-column: 3 / 5; grid-row: 1; }
+  .kr { grid-column: 3 / 5; grid-row: 2; }
+  .vp { grid-column: 5 / 7; grid-row: 1 / 3; }
+  .cr { grid-column: 7 / 9; grid-row: 1; }
+  .ch { grid-column: 7 / 9; grid-row: 2; }
+  .cs { grid-column: 9 / 11; grid-row: 1 / 3; }
+  .co { grid-column: 1 / 6; grid-row: 3; }
+  .rv { grid-column: 6 / 11; grid-row: 3; }
+  .cell .todo { font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="top">
+    <h1>Business Model Canvas<span class="ar">نموذج العمل التجاري</span></h1>
+    <span class="lane">near-zero budget · nationwide</span>
+  </div>
+  <div class="bmc">
+    <div class="cell kp"><h4>Key partners<span class="ar">الشركاء</span></h4><ul>
+      <li>Local brokers and owners in each city <em>(the first real listings)</em></li>
+      <li>Streamlit Community Cloud <em>(free hosting for the live app)</em></li>
+      <li>A lawyer to review the contract template <em>(next)</em></li>
+      <li>Student and community groups for events</li></ul></div>
+    <div class="cell ka"><h4>Key activities<span class="ar">الأنشطة</span></h4><ul>
+      <li>Sign up partner brokers, city by city</li>
+      <li>Add and check real listings</li>
+      <li>Post content every week</li>
+      <li>Build the roadmap features</li></ul></div>
+    <div class="cell kr"><h4>Key resources<span class="ar">الموارد</span></h4><ul>
+      <li>A working app: 10 screens, 10 cities</li>
+      <li>The gold house-and-key brand</li>
+      <li>The student team's time</li></ul></div>
+    <div class="cell vp"><h4>Value propositions<span class="ar">القيمة المقدمة</span></h4><ul>
+      <li><b>Searchers:</b> every city in one search, with price, rooms and area on every card</li>
+      <li>A shortlist of favorites, and a map pin for each home</li>
+      <li>A contract draft to read before meeting anyone</li>
+      <li><b>Brokers:</b> a place where small cities are not buried under Cairo [37]</li></ul></div>
+    <div class="cell cr"><h4>Relationships<span class="ar">العلاقة مع العملاء</span></h4><ul>
+      <li>Self-service web app, no sign-up needed to browse</li>
+      <li>Personal visits to founding partners</li>
+      <li>WhatsApp contact <em>(next)</em></li></ul></div>
+    <div class="cell ch"><h4>Channels<span class="ar">القنوات</span></h4><ul>
+      <li>Facebook groups and pages</li>
+      <li>Instagram posts and stories</li>
+      <li>QR codes at events and brokers' offices</li></ul></div>
+    <div class="cell cs"><h4>Customer segments<span class="ar">شرائح العملاء</span></h4>
+      <span class="todo">pick from the persona options: A newly married couples · B Egyptians abroad · C local brokers (partners). Most plans need one buyer group plus brokers.</span></div>
+    <div class="cell co"><h4>Cost structure<span class="ar">التكاليف</span></h4><ul>
+      <li>Hosting: EGP 0 today (Streamlit Community Cloud)</li>
+      <li>Promotion: organic posts, so time instead of money</li>
+      <li>Later: a domain name, real photos, and a little paid reach</li></ul></div>
+    <div class="cell rv"><h4>Revenue streams<span class="ar">مصادر الدخل</span></h4>
+      <span class="todo">pick, or combine: A free to list, pay to be featured · B founding-partner brokers free for 6 months, then a monthly plan · C a share of the broker's fee when a deal closes. research.md recommends B, then A.</span></div>
+  </div>
+  <div class="foot">[n] = source number in docs/research.md · (next) = on the roadmap, not built yet</div>
+</div>
+</body>
+</html>
