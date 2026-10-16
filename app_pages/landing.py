@@ -19,7 +19,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# ============ HERO ============
 hero_text, hero_image = st.columns([1.2, 1], gap="large")
 
 with hero_text:
@@ -50,12 +49,12 @@ with hero_text:
 with hero_image:
     st.image("images/manyhouses_baner.png", width="stretch")
 
-# ============ TRUST NUMBERS ============
+
 st.space("large")
 st.divider()
 st.space("medium")
 
-# These numbers are counted from the property list in data.py.
+
 stats = [
     ("10+", "Cities Covered"),
     ("4", "Property Types"),
@@ -68,7 +67,6 @@ for col, (number, label) in zip(stat_cols, stats):
         st.markdown(f'<div class="stat-number">{number}</div>', unsafe_allow_html=True)
         st.caption(label)
 
-# ============ FEATURES ============
 st.space("large")
 st.markdown('<h2 class="centered">Why Choose manyhouses?</h2>', unsafe_allow_html=True)
 st.caption("Built for how Egyptians actually buy and rent property")
@@ -91,7 +89,7 @@ for idx, (icon, title, desc) in enumerate(features):
             st.subheader(title)
             st.write(desc)
 
-# ============ CITIES ============
+
 st.space("large")
 st.divider()
 st.space("medium")
@@ -121,7 +119,6 @@ for idx, (city, icon) in enumerate(cities):
             st.markdown(f"<div class='centered'><b>{city}</b></div>", unsafe_allow_html=True)
             st.caption("Listings available")
 
-# ============ SAMPLE FEEDBACK ============
 st.space("large")
 st.divider()
 st.space("medium")
@@ -143,7 +140,6 @@ for col, (name, city, text) in zip(test_cols, testimonials):
             st.markdown(f"**{name}** — {city}")
             st.caption(f"\"{text}\"")
 
-# ============ CALL TO ACTION ============
 st.space("large")
 with st.container(border=True):
     st.markdown('<h2 class="centered">Ready to Find Your Home?</h2>', unsafe_allow_html=True)

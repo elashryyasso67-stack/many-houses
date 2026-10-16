@@ -40,7 +40,7 @@ with left_column:
 
         preferred_contact = st.radio(
             "Preferred way to contact you",
-            ["Email", "Phone", "WhatsApp"],
+            [ "Phone", "WhatsApp"],
             horizontal=True,
         )
         message = st.text_area("Message", height=150, placeholder="Write your question here...")
@@ -60,12 +60,11 @@ with left_column:
 with right_column:
     st.subheader("Our contact details")
     st.info("Our team is available Saturday to Thursday, 9:00 AM to 6:00 PM.")
-    st.write(":material/email: **Email**")
     st.write("support@manyhouses.com")
     st.write(":material/phone: **Phone**")
-    st.write("+20 100 000 0000")
+    st.write("+20 100 147 9499")
     st.write(":material/location_on: **Office**")
-    st.write("Cairo, Egypt")
+    st.write("kafr el sheikh, Egypt")
 
     with st.expander("Before you contact us"):
-        st.write("For a faster response, include the property name, your preferred viewing date, and your budget.")
+        st.write("For a faster response, include the property name, your preferred viewing date, and your budget...for better contact, use whatsapp")
