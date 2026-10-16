@@ -63,7 +63,7 @@ These are the choices made to keep the code simple. Each one can be changed late
 - **The Gallery is empty.** Only one property has a second photo slot, and that slot is empty.
 - **Errors are prevented, not handled.** The code uses plain `if` checks, such as "is this box empty?". There is no `try`/`except`, so a photo that fails to load shows the browser's broken-image icon.
 - **Text boxes have no length limit.** Nothing outside the app reads them, so no limit is set.
-- **Contact details and testimonials are placeholders.** The phone number (+20 100 000 0000), the email address, and the client quotes on the About and Landing pages are sample values. Replace them before launch.
+- **Testimonials are placeholders.** The client quotes on the About and Landing pages are sample values. Replace them before launch.
 - **No `services/` folder.** The code keeps each screen in its own file, with the property lookup in `data.py`. Simpler to read for one person, but harder to grow.
 - **The map uses Streamlit's built-in map.** It shows one pin for each property.
 - **Only Streamlit is installed.** It is pinned to version 1.64.0 in `requirements.txt`, the version this code was tested with.

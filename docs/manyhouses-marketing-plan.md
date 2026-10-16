@@ -16,6 +16,7 @@
 | **Live app** | <https://many-houses.streamlit.app> |
 | **Launch** | Nationwide, with a near-zero, organic budget |
 | **The ask** | Try the app, and brokers and owners: list your first real homes with us |
+| **Contact** | WhatsApp / phone +20 100 147 9499 · many.houses1@gmail.com · Kafr El Sheikh, Egypt |
 | **One-line pitch** | <mark>✏️ Student writes: one sentence. Options: A "manyhouses puts homes from Alexandria to Aswan in one simple search." · B "The property search for every city the big portals skip."</mark> |
 | **Team** | <mark>✏️ Student writes: names, school, and who did what</mark> |
 
@@ -158,7 +159,7 @@ The images are in `docs/social/`, and they are made from real app screenshots.
 |------|-----------------|----------------|
 | Launch | <mark>✏️ Student writes: Option: "Homes from Alexandria to Aswan in one search. Try the prototype: many-houses.streamlit.app"</mark> | <mark>✏️ Student writes: the same in Arabic</mark> |
 | Feature | <mark>✏️ Student writes: Option: "Price, rooms and area on every card, before you ever visit."</mark> | <mark>✏️ Student writes: the same in Arabic</mark> |
-| Partners | <mark>✏️ Student writes: Option: "Brokers and owners outside Cairo: be one of our first partners. Message us."</mark> | <mark>✏️ Student writes: the same in Arabic</mark> |
+| Partners | <mark>✏️ Student writes: Option: "Brokers and owners outside Cairo: be one of our first partners. WhatsApp us on +20 100 147 9499."</mark> | <mark>✏️ Student writes: the same in Arabic</mark> |
 
 ### Four-week content calendar | جدول المحتوى
 
@@ -224,7 +225,7 @@ The app is a working prototype. Some things it does not do yet. We show them as 
 - Prices show in US dollars ($), not EGP.
 - Sign in and Register only check that the boxes are filled. There are no real accounts.
 - Favorites and form input last only while the browser tab is open.
-- Contact us shows a thank-you but sends nothing. Contact details and testimonials on the About and Welcome pages are placeholders, so this plan does not use them.
+- The Contact us form shows a thank-you but sends nothing, so partners should use WhatsApp, the phone or the email. The testimonials on the About and Welcome pages are sample quotes, so this plan does not use them.
 - The contract is a text draft, not a legal document.
 
 ## 9. Student Worksheet | ورقة عمل الطالب

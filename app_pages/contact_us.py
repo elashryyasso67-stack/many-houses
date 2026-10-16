@@ -60,11 +60,12 @@ with left_column:
 with right_column:
     st.subheader("Our contact details")
     st.info("Our team is available Saturday to Thursday, 9:00 AM to 6:00 PM.")
-    st.write("support@manyhouses.com")
+    st.write(":material/email: **Email**")
+    st.write("many.houses1@gmail.com")
     st.write(":material/phone: **Phone**")
     st.write("+20 100 147 9499")
     st.write(":material/location_on: **Office**")
-    st.write("kafr el sheikh, Egypt")
+    st.write("Kafr El Sheikh, Egypt")
 
     with st.expander("Before you contact us"):
         st.write("For a faster response, include the property name, your preferred viewing date, and your budget...for better contact, use whatsapp")

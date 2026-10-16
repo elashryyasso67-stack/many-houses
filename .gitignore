@@ -5,3 +5,4 @@ ISSUES.md
 .claude/
 .agents/
 .vscode/
+__pycache__/

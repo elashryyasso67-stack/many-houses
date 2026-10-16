@@ -76,7 +76,7 @@ for name, city, text in testimonials:
 st.space("small")
 
 st.subheader(":material/location_on: Our Office")
-st.caption("📍 Cairo, Egypt")
-st.caption("📞 +20 100 000 0000")
-st.caption("📧 support@manyhouses.com")
+st.caption("📍 Kafr El Sheikh, Egypt")
+st.caption("📞 +20 100 147 9499")
+st.caption("📧 many.houses1@gmail.com")
 st.caption("🕐 Saturday to Thursday, 9:00 AM — 6:00 PM")

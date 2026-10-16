@@ -54,6 +54,6 @@ for faq in faqs:
 st.space("small")
 
 st.subheader(":material/support_agent: Still have questions?")
-st.caption("Reach out to us at support@manyhouses.com or call +20 100 000 0000.")
+st.caption("Reach out to us at many.houses1@gmail.com or call +20 100 147 9499.")
 if st.button("Contact Us", type="primary", width="stretch"):
     st.switch_page("app_pages/contact_us.py")

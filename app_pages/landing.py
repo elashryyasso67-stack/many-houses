@@ -175,9 +175,9 @@ with footer_cols[1]:
     st.page_link("app_pages/contact_us.py", label="Contact Us")
 with footer_cols[2]:
     st.markdown("**Contact**")
-    st.caption(":material/location_on: Cairo, Egypt")
-    st.caption(":material/phone: +20 100 000 0000")
-    st.caption(":material/email: support@manyhouses.com")
+    st.caption(":material/location_on: Kafr El Sheikh, Egypt")
+    st.caption(":material/phone: +20 100 147 9499")
+    st.caption(":material/email: many.houses1@gmail.com")
 
 st.space("small")
 st.caption("© 2025 manyhouses. All rights reserved. | Built with Streamlit")
