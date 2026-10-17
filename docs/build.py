@@ -5,7 +5,7 @@ Run it from the repo root after you change anything in docs/:
     pip install playwright markdown-it-py
     python -m playwright install chromium     (skip this if Google Chrome is installed)
     python docs/build.py                      (builds everything)
-    python docs/build.py poster               (or: diagrams, slides, plan, brand, social)
+    python docs/build.py poster               (or: diagrams, slides, plan, documentation, brand, social)
 
 It also counts the "Student writes" boxes that are still empty, so you know what is left to fill in.
 """
@@ -19,6 +19,7 @@ DOCS = pathlib.Path(__file__).parent.resolve()
 
 # Output names.
 PLAN = "manyhouses-marketing-plan"
+DOCUMENTATION = "Documentation"
 SLIDES_PDF = "manyhouses-pitch-deck.pdf"
 POSTER_PDF = "manyhouses-poster-1000x2000mm.pdf"
 BRAND_PDF = "manyhouses-brand-guide.pdf"
@@ -73,23 +74,29 @@ def build_slides(browser):
     print("slides   ", SLIDES_PDF)
 
 
-def build_plan(browser):
-    source = DOCS / (PLAN + ".md")
+def build_markdown(browser, name):
+    # Turns docs/<name>.md into docs/<name>.pdf, on A4 pages.
+    source = DOCS / (name + ".md")
     markdown = MarkdownIt("commonmark", {"html": True}).enable("table")
     body = markdown.render(source.read_text(encoding="utf-8"))
+    # dir="auto" lets each line pick its own direction: Arabic lines go right to left, English left to right.
+    for tag in ["<p>", "<li>", "<h1>", "<h2>", "<h3>", "<td>", "<th>"]:
+        body = body.replace(tag, tag.replace(">", " dir='auto'>"))
     style = (DOCS / "assets" / "documentation.css").read_text(encoding="utf-8")
+    # The English font has no Arabic letters, so the Arabic font fills them in.
+    style = style + " body { font-family: var(--sans), var(--arabic); }"
     html = ("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'>"
             "<link rel='stylesheet' href='assets/brand.css'><style>" + style + "</style></head>"
             "<body><main>" + body + "</main></body></html>")
     # Saved next to the .md so the image links inside it still work.
-    temp = DOCS / "_plan.html"
+    temp = DOCS / ("_" + name + ".html")
     temp.write_text(html, encoding="utf-8")
     page = open_page(browser, temp, 900, 1200)
-    page.pdf(path=str(DOCS / (PLAN + ".pdf")), format="A4", print_background=True,
+    page.pdf(path=str(DOCS / (name + ".pdf")), format="A4", print_background=True,
              margin={"top": "18mm", "bottom": "18mm", "left": "16mm", "right": "16mm"})
     page.close()
     temp.unlink()
-    print("plan     ", PLAN + ".pdf")
+    print("markdown ", name + ".pdf")
 
 
 def build_brand(browser):
@@ -138,7 +145,7 @@ with sync_playwright() as playwright:
     # With no word after build.py, build everything.
     wanted = sys.argv[1:]
     if len(wanted) == 0:
-        wanted = ["diagrams", "social", "poster", "slides", "plan", "brand"]
+        wanted = ["diagrams", "social", "poster", "slides", "plan", "documentation", "brand"]
 
     if "diagrams" in wanted:
         build_diagrams(browser)
@@ -149,7 +156,9 @@ with sync_playwright() as playwright:
     if "slides" in wanted:
         build_slides(browser)
     if "plan" in wanted:
-        build_plan(browser)
+        build_markdown(browser, PLAN)
+    if "documentation" in wanted:
+        build_markdown(browser, DOCUMENTATION)
     if "brand" in wanted:
         build_brand(browser)
     browser.close()
