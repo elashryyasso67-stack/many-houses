@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>manyhouses Personas</title>
-<!-- Three persona options. The student picks one (or merges them) after the interviews in research.md. Numbers come from research.md. -->
+<!-- Three personas: Mona is the buyer we start with, Hassan is the partner, Karim comes later. Numbers come from research.md. -->
 <link rel="stylesheet" href="../assets/brand.css">
 <link rel="stylesheet" href="../assets/diagram.css">
 <style>
   .canvas { height: 790px; }
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .persona { min-height: 560px; display: flex; flex-direction: column; gap: 14px; border: 2.5px dashed var(--todo-line); background: #FFFDF3; }
+  .persona { min-height: 560px; display: flex; flex-direction: column; gap: 14px; }
+  .persona.later { border: 2.5px dashed var(--ink-soft); opacity: 0.72; }
+  .pick p { font: 400 19px/1.45 var(--sans); margin: 0; }
   .who { display: flex; gap: 16px; align-items: center; }
   .avatar { flex: none; width: 74px; height: 74px; border-radius: 50%; background: var(--ink); color: var(--accent); display: flex; align-items: center; justify-content: center; font: 600 32px var(--display); }
   .who b { display: block; font: 700 25px var(--sans); }
@@ -24,19 +26,19 @@
 <div class="canvas">
   <div class="top">
     <h1>Who is it for?<span class="ar">لمن هذا التطبيق؟</span></h1>
-    <span class="lane">3 persona options · pick one</span>
+    <span class="lane">buyer first · brokers as partners</span>
   </div>
   <div class="grid">
     <div class="box persona">
-      <span class="chip">Option A · buyer</span>
+      <span class="chip">Primary · buyer</span>
       <div class="who"><div class="avatar">M</div><div><b>Mona, 27</b><span>Teacher in Aswan, engaged, looking for a first flat</span></div></div>
       <div class="row"><b>WHY NOW</b><p>936,739 marriage contracts in 2024. Most new couples need a home [3].</p></div>
       <div class="row"><b>PAIN TODAY</b><p>Facebook posts hide the price ("السعر في الخاص"), and brokers show her flats one visit at a time.</p></div>
       <div class="row gives"><b>MANYHOUSES GIVES</b><p>Price, rooms and area on every card. A favorites shortlist to show her family.</p></div>
       <div class="row"><b>WHERE TO REACH HER</b><p>Facebook groups for flats in her city, and engagement and wedding pages.</p></div>
     </div>
-    <div class="box persona">
-      <span class="chip">Option B · buyer abroad</span>
+    <div class="box persona later">
+      <span class="chip">Later · buyer abroad</span>
       <div class="who"><div class="avatar">K</div><div><b>Karim, 34</b><span>Engineer in Riyadh, buying a home back in Egypt</span></div></div>
       <div class="row"><b>WHY NOW</b><p>Egyptians abroad sent a record US$36.5 billion home in FY2024/25 [20].</p></div>
       <div class="row"><b>PAIN TODAY</b><p>He cannot visit flats from abroad, and he has to trust a stranger's photos and a broker's word.</p></div>
@@ -44,7 +46,7 @@
       <div class="row"><b>WHERE TO REACH HIM</b><p>Facebook groups of Egyptians in the Gulf, Instagram, family back home.</p></div>
     </div>
     <div class="box persona">
-      <span class="chip">Option C · partner</span>
+      <span class="chip">Partner · supply</span>
       <div class="who"><div class="avatar">H</div><div><b>Hassan, 45</b><span>Local broker in Luxor with 20 flats to rent or sell</span></div></div>
       <div class="row"><b>WHY NOW</b><p>Big portals focus on Cairo. Dubizzle has about 157k Cairo property ads out of 200k+ [37].</p></div>
       <div class="row"><b>PAIN TODAY</b><p>His listings get buried in Facebook groups, and big portals charge agent subscriptions [35].</p></div>
@@ -52,7 +54,7 @@
       <div class="row"><b>WHERE TO REACH HIM</b><p>A visit to his office with a QR flyer and the live demo on a phone.</p></div>
     </div>
   </div>
-  <div class="pick"><span class="todo">pick one persona, or merge two, after your 5 interviews. Cross out the others, and change the name and details to match what people told you.</span></div>
+  <div class="pick"><p><b>We start with Mona and Hassan.</b> Mona is the buyer we market to first, and Hassan brings the real listings she is looking for. Karim comes later, once the listings are real.</p></div>
   <div class="foot">[n] = source number in docs/research.md · Names and ages are examples, not real people.</div>
 </div>
 </body>

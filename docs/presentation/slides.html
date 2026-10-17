@@ -46,7 +46,8 @@
   .title-text { position: absolute; left: 72px; top: 140px; width: 680px; }
   .wordmark { font: 500 92px/1 var(--display); letter-spacing: 0.06em; text-transform: uppercase; margin: 18px 0 26px -4px; color: #fff; white-space: nowrap; }
   .wordmark .dot { color: var(--accent); }
-  .tagline { margin-bottom: 16px; }
+  .tagline { margin-bottom: 16px; font: 500 40px/1.1 var(--display); color: var(--accent); }
+  .title-text > div:last-child { font-size: 19px; line-height: 1.5; color: #E8E2D2; }
   .todo { font-size: 19px; line-height: 1.5; }
 
   .cards { display: grid; gap: 22px; }
@@ -145,8 +146,8 @@
   <div class="title-text">
     <div class="kicker">Real estate · Egypt · 10 cities</div>
     <div class="wordmark">many<span class="dot">·</span>houses</div>
-    <div class="tagline"><span class="todo">a 2–4 word tagline. Options: A "Every city. One search." · B "Your key to any city." · C "بيتك في أي مدينة"</span></div>
-    <div><span class="todo">one sentence: what can someone do with manyhouses? Option: "Search homes from Alexandria to Aswan, save the ones you love, and read the contract before you meet anyone."</span></div>
+    <div class="tagline">Every city. One search.</div>
+    <div>Search homes from Alexandria to Aswan, save the ones you love, and read the contract before you meet anyone.</div>
   </div>
   <div class="foot"><span><b>MANY·HOUSES</b> · Afro-Asian Forum for Technology and Innovation · Marketing</span><span>1</span></div>
 </section>
@@ -154,7 +155,7 @@
 <!-- 2 · The problem -->
 <section class="slide">
   <div class="kicker">01 · The problem <span class="ar">المشكلة</span></div>
-  <h2><span class="todo">a one-line headline. Options: A "Finding a home shouldn't take ten apps." · B "Cairo gets the portals. Everyone else gets Facebook."</span></h2>
+  <h2>Cairo gets the portals. Everyone else gets Facebook.</h2>
   <div class="cards three">
     <div class="card"><span class="icon">01</span><h3>Scattered</h3><p>Homes are spread across brokers, Facebook groups and five or more portals. Buyers check them one by one.</p></div>
     <div class="card"><span class="icon">02</span><h3>Cairo-first</h3><p>About 157k of Dubizzle's 200k+ property ads are in Cairo <span class="src">[37]</span>. Property Finder's featured projects start at EGP 12.4M <span class="src">[32]</span>.</p></div>
@@ -180,8 +181,8 @@
 <!-- 4 · Who it's for -->
 <section class="slide">
   <div class="kicker">03 · Who it's for <span class="ar">لمن هذا التطبيق</span></div>
-  <h2 style="margin-bottom: 18px;"><span class="todo">a headline about the people you chose. Option: "Built for everyone the big portals skip."</span></h2>
-  <div class="diagram fit"><img src="../diagrams/persona.png" alt="Three persona options"></div>
+  <h2 style="margin-bottom: 18px;">Built for everyone the big portals skip.</h2>
+  <div class="diagram fit"><img src="../diagrams/persona.png" alt="Our audience: a buyer persona and a partner persona"></div>
   <div class="foot"><span><b>MANY·HOUSES</b> · Property listings across Egypt</span><span>4</span></div>
 </section>
 
@@ -246,7 +247,7 @@
 <!-- 9 · Business model -->
 <section class="slide">
   <div class="kicker">07 · Business model <span class="ar">نموذج العمل</span></div>
-  <h2 style="margin-bottom: 16px;"><span class="todo">how you will earn. Options: A "Free to list, pay to stand out." · B "Free for founding partners, then a small monthly plan." · C "We earn when our brokers close a deal."</span></h2>
+  <h2 style="margin-bottom: 16px;">Free for founding partners, then pay to stand out.</h2>
   <div class="diagram fit"><img src="../diagrams/canvas.png" alt="Business Model Canvas"></div>
   <div class="foot"><span><b>MANY·HOUSES</b> · Property listings across Egypt</span><span>9</span></div>
 </section>
@@ -263,7 +264,7 @@
         <div class="card"><h3>Founding partners</h3><p>Visit brokers and owners city by city with a QR flyer and the live demo.</p></div>
         <div class="card"><h3>Events</h3><p>The poster and QR code at forums, universities and community events.</p></div>
       </div>
-      <p style="margin-top: 18px;"><span class="todo">your campaign idea in one line. Options: A "#MyCityToo: one home from every city, every week" · B "Founding 50: the first 50 brokers list free" · C "Show your city: people share the street they want to live on"</span></p>
+      <p style="margin-top: 18px;"><b>Campaign: #MyCityToo</b>, one home from a different city every week.</p>
     </div>
     <div class="posts">
       <img src="../social/ig-launch.png" alt="Instagram launch post">
@@ -288,12 +289,12 @@
       <li>Real photos, not placeholders</li>
       <li>Prices in EGP, with installment plans</li>
       <li>A "checked by a partner" badge</li>
-      <li>WhatsApp contact that reaches a person</li></ul><p style="margin-top: 14px;"><span class="todo">when? e.g. "in 3 months"</span></p></div>
+      <li>WhatsApp contact that reaches a person</li></ul><p style="margin-top: 14px;"><b>When:</b> in 3 months</p></div>
     <div class="card"><span class="tag">LATER</span><h3>Grow</h3><ul>
       <li>Accounts that keep favorites between visits</li>
       <li>Partners add their own listings</li>
       <li>A visit counter for the funnel</li>
-      <li>An Arabic version of the app</li></ul><p style="margin-top: 14px;"><span class="todo">when? e.g. "in 1 year"</span></p></div>
+      <li>An Arabic version of the app</li></ul><p style="margin-top: 14px;"><b>When:</b> in 1 year</p></div>
   </div>
   <div class="foot"><span><b>MANY·HOUSES</b> · Property listings across Egypt</span><span>11</span></div>
 </section>
@@ -309,7 +310,7 @@
       <div>Brokers and owners: list your first homes with us.</div>
       <div>WhatsApp <b style="color: var(--accent);">+20 100 147 9499</b> · <b style="color: var(--accent);">many.houses1@gmail.com</b></div>
     </div>
-    <div class="line"><span class="todo">your name · team or school</span></div>
+    <div class="line">Yassin Al Ashry · Techno Future Academy, Kafr El Sheikh</div>
     <div class="qrrow">
       <div class="code"><img src="../assets/qr-app.svg" alt="QR code for many-houses.streamlit.app"></div>
       <p>Scan to try the live app:<br><b>many-houses.streamlit.app</b><br>Thank you · شكرًا</p>

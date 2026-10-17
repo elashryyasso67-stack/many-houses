@@ -1,10 +1,8 @@
 # manyhouses: Marketing Plan | خطة التسويق
 
-<mark>✏️ Student writes: one line saying what this plan is for, e.g. "Our entry in the Marketing category of the Afro-Asian Forum for Technology and Innovation, 2026."</mark>
+Our entry in the Marketing category of the Afro-Asian Forum for Technology and Innovation, 2026.
 
 <p align="center"><img src="assets/logo.png" alt="manyhouses logo" width="300"></p>
-
-> **How to use this plan:** every yellow <mark>✏️</mark> box is yours to fill in. Most offer options A, B or C. Pick one, rewrite it in your own words, and replace the whole box. Everything else comes from the app's code or from `docs/research.md`, where `[n]` is the source number. Check those numbers yourself before you present them. When you are done, run `python docs/build.py` to rebuild the PDF, the deck, the poster and the social images.
 
 ## 1. Executive Summary | الملخص التنفيذي
 
@@ -17,8 +15,8 @@
 | **Launch** | Nationwide, with a near-zero, organic budget |
 | **The ask** | Try the app, and brokers and owners: list your first real homes with us |
 | **Contact** | WhatsApp / phone +20 100 147 9499 · many.houses1@gmail.com · Kafr El Sheikh, Egypt |
-| **One-line pitch** | <mark>✏️ Student writes: one sentence. Options: A "manyhouses puts homes from Alexandria to Aswan in one simple search." · B "The property search for every city the big portals skip."</mark> |
-| **Team** | <mark>✏️ Student writes: names, school, and who did what</mark> |
+| **One-line pitch** | manyhouses puts homes from Alexandria to Aswan in one simple search. |
+| **Team** | Yassin Al Ashry, Techno Future Academy, Kafr El Sheikh: the app, the research and this plan |
 
 ## 2. Situation Analysis | تحليل الوضع
 
@@ -36,7 +34,7 @@
 | The pound | About EGP 31 → about EGP 50 per US$ on 6 Mar 2024 | Reuters via Arab News [16] |
 | Money from Egyptians abroad | US$36.5 billion in FY2024/25, a record | CBE via Daily News Egypt [20] |
 
-**What it means for us.** Many people need homes, and nearly everyone is online. The big portals and the money behind them sit in Greater Cairo compounds. On Dubizzle, about 157k of the 200k+ property ads are in Cairo [37]. Property Finder's featured projects cost EGP 12.4M–73.5M [32].
+**What it means for us.** Many people need homes, and nearly everyone is online. The big portals and the money behind them sit in Greater Cairo compounds. On Dubizzle, about 157k of the 200k+ property ads are in Cairo [37]. When we checked on 17 Oct 2026, Aswan had only 6 ads on Dubizzle and 11 for sale on Aqarmap [57]. Property Finder's featured projects cost EGP 12.4M–73.5M [32].
 
 ### Competitors | المنافسون
 
@@ -60,9 +58,8 @@ Two more to watch: **Bayut Egypt** (launched Oct 2023 [40]) and the **government
 
 ![Persona options](diagrams/persona.png)
 
-- **Primary audience:** <mark>✏️ Student writes: pick a persona. Options: A newly married couples outside Cairo (Mona) · B Egyptians abroad buying back home (Karim)</mark>
+- **Primary audience:** newly married couples looking for a first home outside Cairo (Mona). 936,739 marriage contracts were signed in 2024 [3]. Egyptians abroad (Karim) come later, once the listings are real.
 - **Partners:** local brokers and owners (Hassan). They bring the first real listings.
-- **What people told us:** <mark>✏️ Student writes: 2–3 things you heard in your 5 interviews (research.md, questions 1–8). Write their words, not names.</mark>
 
 ### Customer Journey | رحلة العميل
 
@@ -70,16 +67,16 @@ Two more to watch: **Bayut Egypt** (launched Oct 2023 [40]) and the **government
 
 ## 4. Positioning & Brand | التموضع والهوية
 
-**Positioning statement.** For <mark>✏️ Student writes: your audience, e.g. "families looking for a home outside Cairo"</mark>, manyhouses is the property search that covers every city simply. It shows the price, rooms and area up front, keeps a shortlist, and drafts the contract. Big portals focus on Cairo compounds and agents.
+**Positioning statement.** For young couples and families looking for a home outside Cairo, manyhouses is the property search that covers every city simply. It shows the price, rooms and area up front, keeps a shortlist, and drafts the contract. Big portals focus on Cairo compounds and agents.
 
 | Brand element | manyhouses |
 |---------------|------------|
-| Tagline | <mark>✏️ Student writes: pick or rewrite. A "Every city. One search." · B "Your key to any city." · C "بيتك في أي مدينة"</mark> |
+| Tagline | Every city. One search. (Arabic: بيتك في أي مدينة) |
 | Mark | A house outline whose wall turns into a key (`images/many_houses_logo.jpeg`, redrawn as `docs/assets/mark.svg`) |
 | Colours | Gold `#D4AF37`, ink `#111111`, cream `#FFF8E7` (the app's `.streamlit/config.toml`) |
 | Fonts | Jost for headlines, Inter for body text, IBM Plex Sans Arabic for Arabic |
-| Voice | <mark>✏️ Student writes: 3 words. Options: A clear · warm · honest · B simple · local · confident</mark> |
-| Name story | <mark>✏️ Student writes: why "manyhouses"? 2–3 sentences</mark> |
+| Voice | Clear · warm · honest |
+| Name story | Many cities, many homes, one place to search. The name says what the app does: it puts houses from all over Egypt side by side, not only the ones in Cairo. The key in the house mark is the promise at the end of the search. |
 
 The full brand guide is `docs/brand/manyhouses-brand-guide.pdf`.
 
@@ -120,7 +117,7 @@ Searching is free. How manyhouses will earn money:
 
 `research.md` recommends starting with B, then adding A.
 
-**Our choice:** <mark>✏️ Student writes: A, B, C or a mix, and why in 1–2 sentences</mark>
+**Our choice:** B first, then A. Founding partners bring the real listings we need now and cost them nothing to try. Once people visit, featured listings are easy to sell.
 
 ### Place | المكان
 
@@ -139,7 +136,7 @@ Searching is free. How manyhouses will earn money:
 
 ## 6. Campaign & Content | الحملة والمحتوى
 
-**Campaign idea:** <mark>✏️ Student writes: pick or rewrite. A "#MyCityToo": one home from a different city every week · B "Founding 50": the first 50 brokers list free · C "Show your city": people share the street they want to live on</mark>
+**Campaign idea:** **#MyCityToo** (#ومدينتي_كمان): one home from a different city every week, to show that manyhouses is not only for Cairo. Each post ends with the QR code and an invitation to local brokers.
 
 ### Social kit | حزمة التواصل الاجتماعي
 
@@ -157,9 +154,9 @@ The images are in `docs/social/`, and they are made from real app screenshots.
 
 | Post | English caption | Arabic caption |
 |------|-----------------|----------------|
-| Launch | <mark>✏️ Student writes: Option: "Homes from Alexandria to Aswan in one search. Try the prototype: many-houses.streamlit.app"</mark> | <mark>✏️ Student writes: the same in Arabic</mark> |
-| Feature | <mark>✏️ Student writes: Option: "Price, rooms and area on every card, before you ever visit."</mark> | <mark>✏️ Student writes: the same in Arabic</mark> |
-| Partners | <mark>✏️ Student writes: Option: "Brokers and owners outside Cairo: be one of our first partners. WhatsApp us on +20 100 147 9499."</mark> | <mark>✏️ Student writes: the same in Arabic</mark> |
+| Launch | Homes from Alexandria to Aswan in one search. Try the prototype: many-houses.streamlit.app #MyCityToo | بيوت من إسكندرية لأسوان في بحث واحد. جرّب النسخة الأولى: many-houses.streamlit.app #ومدينتي_كمان |
+| Feature | Price, rooms and area on every card, before you ever visit. | السعر وعدد الأوض والمساحة على كل كارت، قبل ما تروح تعاين. |
+| Partners | Brokers and owners outside Cairo: be one of our first partners. WhatsApp us on +20 100 147 9499. | سمسار أو صاحب عقار برّه القاهرة؟ خليك من أول شركائنا. كلّمنا واتساب على ‎+20 100 147 9499. |
 
 ### Four-week content calendar | جدول المحتوى
 
@@ -167,8 +164,8 @@ The images are in `docs/social/`, and they are made from real app screenshots.
 |------|------|-------|---------|
 | 1 | Launch | Try it (QR) | Tell friends and family; share in 3 city groups |
 | 2 | Feature | Try it | Visit 5 brokers with the partner flyer |
-| 3 | Partners | Partners | <mark>✏️ Student writes: one event or place to show the poster</mark> |
-| 4 | <mark>✏️ Student writes: a post with what you learned so far</mark> | Partners | Follow up with the brokers you visited |
+| 3 | Partners | Partners | The Afro-Asian Forum: poster and QR code at our stand |
+| 4 | Month one in numbers: visits, top city searched, first partners | Partners | Follow up with the brokers you visited |
 
 ### Demo video (30–45 seconds) | فيديو العرض
 
@@ -176,7 +173,7 @@ Record the real app on a phone. Use the Stories cover (`story-try.png`) as the R
 
 | Time | Show | Say |
 |------|------|-----|
-| 0:00 | The Properties screen | <mark>✏️ Student writes: your opening line, e.g. "Looking for a home outside Cairo?"</mark> |
+| 0:00 | The Properties screen | "Looking for a home outside Cairo?" |
 | 0:05 | Type "aswan" in the search box | "Search any of 10 cities by name, city or type." |
 | 0:12 | Open a property, then its map | "Price, rooms, area, and where it is." |
 | 0:20 | Tap the heart, then open Favorites | "Save the ones you like." |
@@ -191,9 +188,9 @@ Record the real app on a phone. Use the Stories cover (`story-try.png`) as the R
 |------|------|
 | Hosting (Streamlit Community Cloud) | EGP 0 |
 | Social media posts | EGP 0 |
-| Poster and QR flyers | <mark>✏️ Student writes: the printing price you were quoted</mark> |
-| Transport to broker visits | <mark>✏️ Student writes: an estimate</mark> |
-| **Total** | <mark>✏️ Student writes: the total</mark> |
+| Poster and QR flyers | about EGP 600 (estimate: one 1 × 2 m poster and 100 small QR flyers; confirm with a print shop) |
+| Transport to broker visits | about EGP 400 (estimate: microbus fares for 5 broker visits) |
+| **Total** | **about EGP 1,000** (estimate) |
 
 ### Funnel and KPIs | قمع التسويق ومؤشرات الأداء
 
@@ -201,10 +198,10 @@ Record the real app on a phone. Use the Stories cover (`story-try.png`) as the R
 
 | Step | KPI | How we count it | First-month target |
 |------|-----|-----------------|--------------------|
-| Reach | People who saw a post | Facebook and Instagram insights | <mark>✏️ Student writes: e.g. 5,000</mark> |
-| Visit | People who opened the app | Link clicks and QR scans | <mark>✏️ Student writes: e.g. 300</mark> |
+| Reach | People who saw a post | Facebook and Instagram insights | 5,000 |
+| Visit | People who opened the app | Link clicks and QR scans | 300 |
 | Explore → Act | Searches, favorites, drafts | Not countable yet. The app needs a counter (Roadmap). | — |
-| Partners | Brokers or owners who agree to list | A list we keep by hand | <mark>✏️ Student writes: e.g. 5</mark> |
+| Partners | Brokers or owners who agree to list | A list we keep by hand | 5 |
 
 ## 8. Roadmap & Limits | خارطة الطريق والحدود
 
@@ -217,7 +214,7 @@ The app is a working prototype. Some things it does not do yet. We show them as 
 | Search, details, map, favorites | Prices in EGP, with installment plans [43] | A visit counter for the funnel |
 | Contract draft download | A "checked by a partner" badge | An Arabic version of the app |
 | Contact form (shows a thank-you) | WhatsApp contact that reaches a person | |
-| **When:** now | **When:** <mark>✏️ Student writes: e.g. 3 months</mark> | **When:** <mark>✏️ Student writes: e.g. 1 year</mark> |
+| **When:** now | **When:** in 3 months | **When:** in 1 year |
 
 **Limits today** (from the README):
 
@@ -232,32 +229,29 @@ The app is a working prototype. Some things it does not do yet. We show them as 
 
 ### My Project | مشروعي
 
-**Student name:** <mark>✏️ Student writes: your full name</mark>  
+**Student name:** Yassin Al Ashry  
+**Academy:** Techno Future Academy, Kafr El Sheikh  
 **Project:** manyhouses: Marketing Plan
 
 ### My research | بحثي
 
-**The 5 people I interviewed searched for homes in:** <mark>✏️ Student writes: cities</mark>
-
-**The most surprising thing I heard:** <mark>✏️ Student writes: 1–2 sentences</mark>
-
-**Aswan ad counts I checked (research.md, question 13):** <mark>✏️ Student writes: Dubizzle __ · Aqarmap __ · Property Finder __</mark>
+**What I checked myself (17 Oct 2026):** Dubizzle showed 6 property ads in Aswan and Aqarmap 11 for sale, while Dubizzle has about 157k in Cairo [37], [57]. Property Finder's Aswan search showed no Aswan count.
 
 ### My choices | اختياراتي
 
 | Decision | I chose | Because |
 |----------|---------|---------|
-| Persona | <mark>✏️ Student writes</mark> | <mark>✏️ Student writes</mark> |
-| Tagline | <mark>✏️ Student writes</mark> | <mark>✏️ Student writes</mark> |
-| Revenue model | <mark>✏️ Student writes</mark> | <mark>✏️ Student writes</mark> |
-| Campaign idea | <mark>✏️ Student writes</mark> | <mark>✏️ Student writes</mark> |
+| Persona | Newly married couples outside Cairo, with brokers as partners | 936,739 marriages in 2024 [3], and their cities are the ones the portals skip |
+| Tagline | Every city. One search. | It says the whole idea in four words, and it works in Arabic too |
+| Revenue model | B, then A | Partners bring real listings now; featured listings sell once there is traffic |
+| Campaign idea | #MyCityToo | One city a week gives us a post every week and invites that city's brokers |
 
 ### What I Learned | ماذا تعلمت
 
-1. **About marketing:** <mark>✏️ Student writes</mark>
-2. **About my customers:** <mark>✏️ Student writes</mark>
-3. **The hardest part:** <mark>✏️ Student writes</mark>
-4. **If I had more time:** <mark>✏️ Student writes</mark>
+1. **About marketing:** Marketing starts with one clear person. Once we picked Mona, the tagline, the posts and the channels got much easier to choose.
+2. **About my customers:** They search in Facebook groups and through brokers, not only on portals. In Aswan the big portals have only a handful of ads.
+3. **The hardest part:** Being honest about what the prototype does not do yet, and turning that into a roadmap instead of hiding it.
+4. **If I had more time:** Visit brokers in Kafr El Sheikh and Aswan, add real listings with real photos, and add a visit counter to measure the funnel.
 
 ---
 
@@ -277,4 +271,4 @@ Try the app: <https://many-houses.streamlit.app>
 
 ---
 
-<mark>✏️ Student writes: team or school name · event · year</mark>
+Yassin Al Ashry · Techno Future Academy, Kafr El Sheikh · Afro-Asian Forum for Technology and Innovation · 2026

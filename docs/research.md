@@ -146,7 +146,7 @@ Safe one-line story for the deck: *"108 million people, almost a million wedding
 
 ## 3. Buyer behaviour | سلوك المشتري
 
-**Warning: the evidence here is weak.** There is no good public survey of how Egyptians search for homes. Most of what exists comes from companies selling something. This is the best section to strengthen with your own interviews (see the end).
+**Warning: the evidence here is weak.** There is no good public survey of how Egyptians search for homes. Most of what exists comes from companies selling something.
 
 ### How people search today
 
@@ -195,7 +195,7 @@ Safe one-line story for the deck: *"108 million people, almost a million wedding
 | **Financing / partner fees** | Mortgage or installment products, or bank partnerships | Nawy Now [25]. Dubizzle × Banque Misr [38] | Not public |
 | **Developer advertising and events** | Developers pay for launches, banners, expos | Aqarmap expo success fee (check), Property Finder open house [33] | Not public |
 
-Egypt-specific prices are **not published** by any portal. Ask their sales teams, or open "post an ad" on Dubizzle and Aqarmap to see today's EGP prices (see the questions at the end).
+Egypt-specific prices are **not published** by any portal. Ask their sales teams, or open "post an ad" on Dubizzle and Aqarmap to see today's EGP prices (see the checks at the end).
 
 ### Three options for a near-zero-budget student startup
 
@@ -218,30 +218,12 @@ Egypt-specific prices are **not published** by any portal. Ask their sales teams
 
 ---
 
-## Open questions for the student to check locally
+## Checks still open | أسئلة للتحقق
 
-Ask **5 people who searched for a flat in the last 12 months** (ideally in Aswan and one other city):
+1. Open "post an ad" on Dubizzle Egypt and Aqarmap and screenshot today's EGP prices for featured listings.
+2. Find the CAPMAS bulletin itself for 2024 marriages (the figures here come from press coverage of it).
 
-1. How did you find the flat you took: a broker, Facebook, a portal (which one?), or family and friends?
-2. How many places did you visit before choosing? How long did the search take?
-3. Did you ever see a fake, already-taken, or wrong-price listing? What happened?
-4. How much did the broker charge (percentage or months of rent)? Who paid, buyer or owner?
-5. Was the price written in the ad, or did you have to ask in private?
-6. Would you trust a listing more if a known local broker had "checked" it? What would make you trust it?
-7. Did you search on your phone or a computer? Did you contact the owner by phone call or WhatsApp?
-8. For buyers: cash or installments? How many years?
-
-Ask **3 local brokers or owners**:
-
-9. Do you pay for Aqarmap, Property Finder, Dubizzle, or Facebook ads? How much per month? (This fills the "price not public" gaps.)
-10. Would you list 3–5 properties for free on manyhouses for 6 months in exchange for leads?
-11. Are you registered as a broker (GOEIC / Ministry of Trade)? Is there a fee cap you follow?
-
-Check yourself:
-
-12. Open "post an ad" on Dubizzle Egypt and Aqarmap and screenshot today's EGP prices for featured listings.
-13. Count property ads for Aswan on Dubizzle, Aqarmap and Property Finder. Compare with Cairo (Dubizzle Cairo ≈ 156,690 [37]).
-14. Find the CAPMAS bulletin itself for 2024 marriages (the figures here come from press coverage of it).
+**Checked on 17 Oct 2026: property ads in Aswan.** Dubizzle Egypt showed **6** property ads for sale and rent in Aswan. Aqarmap showed **11** properties for sale in Aswan. Property Finder's Aswan search showed no Aswan count. Dubizzle has about **156,690** ads in Cairo [37], so Aswan has roughly 1 ad for every 26,000 in Cairo [57].
 
 ---
 
@@ -303,3 +285,4 @@ Check yourself:
 54. "Remittances to Egypt reach record USD 37.5 billion in 2025", Egyptian Streets, 6 Jan 2026. https://egyptianstreets.com/2026/01/06/remittances-to-egypt-reach-record-usd-37-5-billion-in-2025/
 55. "A survey by Asharq Business: Expectations of a 15% increase in property prices in Egypt", Invest-Gate, 2025. https://invest-gate.me/?p=68737
 56. "Egyptians show sudden interest in Dubai property", AGBI, Mar 2025. https://agbi.com/real-estate/2025/03/egyptians-show-sudden-interest-in-dubai-property
+57. Property ad counts for Aswan, checked by hand on 17 Oct 2026: Dubizzle Egypt "Properties for Sale & Rent in Aswan", 6 ads, https://www.dubizzle.com.eg/en/properties/aswan/ · Aqarmap "Properties For sale in Aswan", 11 properties, https://aqarmap.com.eg/en/for-sale/property-type/aswan/
